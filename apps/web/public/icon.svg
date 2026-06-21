@@ -1,5 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#0f766e"/>
-  <path d="M33 35h62v14H33zM33 57h44v14H33zM33 79h62v14H33z" fill="#fff"/>
-  <circle cx="92" cy="64" r="14" fill="#f97316"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="54" x2="454" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="0.56" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#061B1B"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="128" y1="145" x2="381" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.47" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="86" y1="155" x2="423" y2="347" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.5" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <filter id="shadow" x="28" y="33" width="456" height="456" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="45" y="45" width="422" height="422" rx="104" fill="url(#bg)" filter="url(#shadow)"/>
+  <rect x="63" y="63" width="386" height="386" rx="88" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="2"/>
+  <path d="M100 286C126 192 220 125 309 141C392 156 438 231 403 299C368 368 266 395 178 358" stroke="url(#orbit)" stroke-width="18" stroke-linecap="round" stroke-dasharray="248 92"/>
+  <path d="M139 347V169H182L243 259L303 169H346V347H297V257L257 318H226L187 257V347H139Z" fill="url(#mark)"/>
+  <path d="M301 169H390V214H346V347H301V169Z" fill="#F8FAFC"/>
+  <path d="M171 201L243 306L315 201" stroke="#F8FAFC" stroke-opacity="0.92" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="113" cy="282" r="18" fill="#22D3EE"/>
+  <circle cx="407" cy="212" r="20" fill="#FACC15"/>
+  <circle cx="368" cy="372" r="12" fill="#34D399"/>
+  <path d="M381 116L391 141L416 151L391 161L381 186L371 161L346 151L371 141L381 116Z" fill="#F8FAFC"/>
 </svg>
