@@ -100,7 +100,7 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
   }, [tools, type, category, pricing, query, sort]);
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-8 md:px-8">
+    <section className="mx-auto w-full max-w-[1500px] px-4 py-8 md:px-8">
       <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-end">
         <div>
           <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm font-bold text-primary">
@@ -207,7 +207,7 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {filtered.map((tool) => (
           <ToolCard key={tool.id} tool={tool} isAdmin={isAdmin} />
         ))}
@@ -254,81 +254,76 @@ function ToolCard({ tool, isAdmin }: { tool: Tool; isAdmin: boolean }) {
   }
 
   return (
-    <article className="group flex min-h-[360px] flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <article className="group flex min-h-[270px] flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <div
-        className="relative flex h-36 items-center justify-center border-b border-border"
+        className="relative flex h-24 items-center justify-center border-b border-border"
         style={{ backgroundColor: tool.category_color ?? "#14b8a6" }}
       >
         {tool.image_url ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={tool.image_url} alt="" className="h-full w-full object-cover" loading="lazy" />
         ) : (
-          <div className="flex h-16 w-16 items-center justify-center rounded-md bg-white/85 text-xl font-black text-zinc-900">
+          <div className="flex h-12 w-12 items-center justify-center rounded-md bg-white/85 text-lg font-black text-zinc-900">
             {(tool.name_en || tool.name).slice(0, 2).toUpperCase()}
           </div>
         )}
         {tool.is_featured && (
-          <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-md bg-amber-300 px-2 py-1 text-xs font-black text-zinc-900">
+          <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-md bg-amber-300 px-2 py-1 text-[11px] font-black text-zinc-900">
             <Star className="h-3 w-3 fill-current" />
             مميز
           </span>
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-4">
-        <div className="flex flex-wrap gap-2">
-          <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{tool.category ?? "أخرى"}</span>
-          <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{formatPricing(tool.pricing)}</span>
-          <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{typeLabel(tool.type)}</span>
+      <div className="flex flex-1 flex-col p-3">
+        <div className="flex flex-wrap gap-1.5">
+          <span className="rounded-md bg-muted px-2 py-1 text-[11px] font-black">{tool.category ?? "أخرى"}</span>
+          <span className="rounded-md bg-muted px-2 py-1 text-[11px] font-black">{formatPricing(tool.pricing)}</span>
+          <span className="rounded-md bg-muted px-2 py-1 text-[11px] font-black">{typeLabel(tool.type)}</span>
         </div>
-        <h2 className="mt-3 line-clamp-1 text-xl font-black">{tool.name}</h2>
-        <p className="mt-2 line-clamp-3 min-h-[72px] text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+        <h2 className="mt-2 line-clamp-1 text-lg font-black">{tool.name}</h2>
+        <p className="mt-1.5 line-clamp-2 min-h-[40px] text-xs leading-5 text-zinc-600 dark:text-zinc-300">
           {tool.description}
         </p>
-        <div className="mt-3 flex flex-wrap gap-1">
-          {(tool.tags ?? []).slice(0, 4).map((tag) => (
-            <span key={tag} className="rounded bg-background px-2 py-1 text-xs font-semibold text-zinc-500">
+        <div className="mt-2 flex flex-wrap gap-1">
+          {(tool.tags ?? []).slice(0, 2).map((tag) => (
+            <span key={tag} className="rounded bg-background px-2 py-0.5 text-[11px] font-semibold text-zinc-500">
               #{tag}
             </span>
           ))}
         </div>
         {tool.type === "github" && (
-          <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-bold text-zinc-600 dark:text-zinc-300">
+          <div className="mt-2 grid grid-cols-2 gap-1.5 text-[11px] font-bold text-zinc-600 dark:text-zinc-300">
             <span className="rounded-md bg-muted px-2 py-1">{tool.github_stars?.toLocaleString() ?? 0} stars</span>
             <span className="rounded-md bg-muted px-2 py-1">{tool.github_language || "Repo"}</span>
-            {(tool.libraries ?? []).slice(0, 2).map((library) => (
-              <span key={library} className="rounded-md bg-muted px-2 py-1">
-                {library}
-              </span>
-            ))}
           </div>
         )}
-        <div className="mt-auto flex gap-2 pt-4">
+        <div className="mt-auto flex gap-1.5 pt-3">
           <a
             href={tool.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md bg-primary px-3 text-sm font-black text-primary-foreground"
+            className="inline-flex h-9 flex-1 items-center justify-center gap-1.5 rounded-md bg-primary px-3 text-xs font-black text-primary-foreground"
           >
-            <ExternalLink className="h-4 w-4" />
+            <ExternalLink className="h-3.5 w-3.5" />
             زيارة
           </a>
           {isAdmin && (
             <a
               href={`/admin/edit/${tool.id}`}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card text-primary hover:bg-muted"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-primary hover:bg-muted"
               title="تعديل الأداة"
             >
-              <Pencil className="h-4 w-4" />
+              <Pencil className="h-3.5 w-3.5" />
             </a>
           )}
           <button
             type="button"
             onClick={favorite}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card"
             title="إضافة للمفضلة"
           >
-            <Bookmark className={`h-4 w-4 ${favoriteState === "done" ? "fill-primary text-primary" : ""}`} />
+            <Bookmark className={`h-3.5 w-3.5 ${favoriteState === "done" ? "fill-primary text-primary" : ""}`} />
           </button>
         </div>
       </div>
