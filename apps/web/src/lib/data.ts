@@ -2,6 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import seed from "@/data/seed-data.json";
 import type { Category, Tool, ToolType } from "@/lib/types";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
+import { enrichToolUseCases } from "@/lib/tool-use-cases";
 
 type SeedPayload = typeof seed;
 type SupabaseToolRow = {
@@ -53,7 +54,7 @@ type SupabaseToolRow = {
 
 function mapSeedTool(tool: SeedPayload["tools"][number], index: number): Tool {
   const category = seed.categories.find((item) => item.slug === tool.category_slug);
-  return {
+  return enrichToolUseCases({
     id: tool.legacy_id || `seed-${index}`,
     legacy_id: tool.legacy_id,
     name: tool.name,
@@ -92,7 +93,7 @@ function mapSeedTool(tool: SeedPayload["tools"][number], index: number): Tool {
     created_by_email: tool.created_by_email,
     created_at: tool.created_at,
     updated_at: tool.updated_at,
-  };
+  });
 }
 
 export function getSeedTools(type?: ToolType) {
@@ -134,7 +135,7 @@ export async function getTools(type?: ToolType) {
   const { data, error } = await query;
   if (error || !data) return getSeedTools(type);
 
-  return (data as SupabaseToolRow[]).map((item) => ({
+  return (data as SupabaseToolRow[]).map((item) => enrichToolUseCases({
     id: item.id,
     legacy_id: item.legacy_id,
     name: item.name,
@@ -209,7 +210,7 @@ export async function getToolById(id: string): Promise<Tool | null> {
   if (error || !data) return null;
 
   const item = data as SupabaseToolRow;
-  return {
+  return enrichToolUseCases({
     id: item.id,
     legacy_id: item.legacy_id,
     name: item.name,
@@ -249,5 +250,5 @@ export async function getToolById(id: string): Promise<Tool | null> {
     created_by_email: item.created_by_email,
     created_at: item.created_at,
     updated_at: item.updated_at,
-  };
+  });
 }

@@ -222,6 +222,7 @@ function Metric({ label, value }: { label: string; value: number }) {
 
 function ToolCard({ tool, isAdmin }: { tool: Tool; isAdmin: boolean }) {
   const [favoriteState, setFavoriteState] = useState<"idle" | "saving" | "done">("idle");
+  const searchChips = Array.from(new Set([...(tool.use_cases ?? []), ...(tool.tags ?? [])])).slice(0, 3);
 
   async function favorite() {
     const supabase = getSupabaseBrowserClient();
@@ -275,9 +276,9 @@ function ToolCard({ tool, isAdmin }: { tool: Tool; isAdmin: boolean }) {
           {tool.description}
         </p>
         <div className="mt-2 flex flex-wrap gap-1">
-          {(tool.tags ?? []).slice(0, 2).map((tag) => (
+          {searchChips.map((tag) => (
             <span key={tag} className="rounded bg-background px-2 py-0.5 text-[11px] font-semibold text-zinc-500">
-              #{tag}
+              {tag}
             </span>
           ))}
         </div>
