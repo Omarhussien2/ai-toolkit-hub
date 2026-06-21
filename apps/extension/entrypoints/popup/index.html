@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyToolkit Capture</title>
+    <style>
+      body {
+        width: 340px;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f7f7f4;
+        color: #18181b;
+      }
+      main {
+        padding: 16px;
+      }
+      h1 {
+        margin: 0 0 4px;
+        font-size: 20px;
+      }
+      p {
+        margin: 0 0 14px;
+        color: #52525b;
+        line-height: 1.6;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #d8d8cf;
+        border-radius: 6px;
+        padding: 0 10px;
+        direction: ltr;
+      }
+      button {
+        width: 100%;
+        height: 42px;
+        margin-top: 10px;
+        border: 0;
+        border-radius: 6px;
+        background: #0f766e;
+        color: white;
+        font-weight: 900;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #ecece7;
+        color: #18181b;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>MyToolkit</h1>
+      <p>احفظ الرابط الحالي وافتح صفحة مراجعة البيانات قبل الإدخال.</p>
+      <label for="baseUrl">رابط موقعك</label>
+      <input id="baseUrl" type="url" />
+      <button id="saveSettings" class="secondary">حفظ الإعداد</button>
+      <button id="capture">حفظ الصفحة الحالية</button>
+      <div id="status"></div>
+      <script type="module" src="./main.ts"></script>
+    </main>
+  </body>
+</html>

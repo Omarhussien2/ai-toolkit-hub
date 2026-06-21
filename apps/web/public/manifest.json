@@ -1,0 +1,19 @@
+{
+  "name": "MyToolkit",
+  "short_name": "MyToolkit",
+  "description": "دليل أدوات الذكاء الاصطناعي والتقنية مع حفظ روابط سريع.",
+  "start_url": "/",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "ar",
+  "theme_color": "#0f766e",
+  "background_color": "#f7f7f4",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

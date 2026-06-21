@@ -1,0 +1,365 @@
+"notes","image_url","description","review_count","average_rating","type","url","tags","usage_count","name","favorite_count","category","sort_order","is_featured","pricing","related_tools","name_en","id","created_date","updated_date","created_by_id","created_by","is_sample"
+"","","مولد كروت فيزا ","0","0","Tool","https://madleets.me/check","[]","0","مولد فيزا","0","أخرى","0","false","مجاني","[]","madleets","69ea3a3a7692b5db419b9d9c","2026-04-23T15:26:50.864000","2026-04-23T15:26:50.864000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Preserve the person EXACTLY as in the reference photo with absolute identity lock.
+
+
+
+- SAME face
+
+
+
+- SAME facial structure
+
+
+
+- SAME wrinkles and skin folds
+
+
+
+- SAME pores distribution
+
+
+
+- SAME age appearance
+
+
+
+- SAME expression
+
+
+
+- SAME head angle
+
+
+
+- SAME proportions
+
+
+
+- SAME asymmetry
+
+
+
+No face regeneration.
+
+
+
+No beautification.
+
+
+
+No symmetry correction.
+
+
+
+No reshaping.No face regeneration.
+
+
+
+No beautification.
+
+
+
+No symmetry correction.
+
+
+
+No reshaping.
+
+
+
+No age change.
+
+
+
+Extreme photorealism, natural human skin texture with visible pores, micro wrinkles, fine skin imperfections.
+
+
+
+8K resolution look, ultra-sharp focus, shot as if on an 85mm lens.
+
+
+
+Soft dramatic cinematic lighting that enhances depth without altering facial features.
+
+
+
+Photographic realism only - no stylization, no artistic interpretation.
+
+
+
+The final result must look like the SAME PERSON photographed with a high-end cinematic camera.. ","0","0","Learn","https://labs.google/flow/about","[]","0","تحسين صور الشخصيات ","0","ميديا","0","false","مجاني","[]","","6964d5de5257c628feb47a4e","2026-01-12T11:07:10.577000","2026-01-12T11:07:10.577000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://fvxtiehimfeutqimhxqx.supabase.co/storage/v1/object/public/tool-media/tools/poe/POE-homepage-scaled.jpeg","Poe AI is an AI chatbot aggregator platform developed by Quora","0","0","Tool","https://poe.com/","[]","0","poe ai","0","منصات","0","false","freemium","[]","","69464aed3cf263e0491f7e1b","2025-12-20T07:06:21.524000","2025-12-20T07:06:21.524000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","## 1) The Core Structure (recommended order)
+
+1. **Medium** (final output)
+    - photo, cinematic still, 3D render, illustration, watercolor, etc.
+2. **Subject** (the main thing + key defining detail)
+    - who/what + critical attributes (material, shape, outfit, age, style, etc.)
+3. **Environment / Setting** (where it happens)
+    - location, era, props, context
+4. **Mood** (emotion)
+    - tense, dreamy, luxury, gritty, calm, surreal, etc.
+5. **Lighting** (how it’s lit)
+    - type + direction + intensity (soft diffused, hard rim, golden hour, neon, etc.)
+6. **Colors** (palette)
+    - 2–4 dominant colors, saturation, contrast
+7. **Composition** (framing)
+    - angle, shot size (wide / medium / close-up), depth of field, symmetry, composition rules
+
+---
+
+## 2) Word Order = Priority Order
+
+- **What you write first is treated as most important.**
+- Put your **non-negotiables** up front (medium / subject / framing).
+- Then add vibe, details, finishing touches.
+
+---
+
+## 3) Tokens & Variables (for speed + consistency)
+
+Goal: stop rewriting everything every time.
+
+- Build reusable **prompt blocks**:
+    - `{LIGHTING_SOFT_STUDIO}`
+    - `{LENS_85MM_SHALLOW_DOF}`
+    - `{COLOR_NEUTRAL_LUX}`
+- Assemble them depending on the job:
+    - Prompt = `Medium + Subject + Setting + {LIGHTING} + {COLORS} + Composition`
+
+---
+
+## 4) One Copy-Paste Template
+
+**Template**`[MEDIUM], [SUBJECT + KEY DETAILS], [SETTING], [MOOD], [LIGHTING], [COLOR PALETTE], [COMPOSITION + LENS + DOF], [FINAL TEXTURE/DETAILS]` 
+
+**Example**`cinematic photo, sleek black sports watch with brushed metal edges and micro scratches, on a wet obsidian stone in a minimal studio set, premium and intense, soft diffused key light + sharp rim light, black/steel/ice-blue palette, 85mm lens, close-up, shallow depth of field, crisp reflections, subtle film grain`
+
+---
+
+## 5) Quality Rules (non-negotiable)
+
+- Be **specific** (not “nice lighting” → “soft diffused key + rim light”).
+- Avoid stuffing 20 styles at once: **one clear direction** wins.
+- Describe **what must be present** more than what must not.
+- If consistency matters, lock: **lens + lighting + palette + composition** first.","0","0","Learn","https://www.notion.so/THE-BEST-WAY-TO-PROMPT-by-timkoda_-2c7ac4ebbbda8094990df3f4b9c69af6","[]","0","A good prompt is a structured","0","ميديا","0","false","مجاني","[]","","694648def811b973c8ead537","2025-12-20T06:57:34.886000","2025-12-20T06:57:34.886000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Learn *how to build a Blazor Hybrid App with Database and Hosting* in this complete end-to-end tutorial! We’ll cover everything from creating a Blazor hybrid app to integrating Supabase for database management, deploying on Android, Web, and Desktop, and even creating a Windows installer and APK for mobile.
+
+In this video, you’ll discover:
+✔ How to build a Blazor Hybrid App
+✔ Integrate Supabase for database
+✔ Host your app using Google Antigravity
+✔ Deploy on Android, Web, and Desktop
+✔ Create Windows Installer and APK for distribution
+
+🔥 Why watch this video?
+Full-stack development in one tutorial
+Covers Blazor hybrid app deployment
+Learn Google Antigravity IDE features
+Perfect for developers building cross-platform apps
+","0","0","Learn","https://youtu.be/aHTiujipq1k?si=V9a3sL765xxDd3az","[]","0","نشر موقع مجاني ","0","أخرى","0","false","مجاني","[]","","69429f19d3ba7ad2a0df02cc","2025-12-17T12:16:25.369000","2025-12-17T12:16:25.369000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3-VL-30B-A3B-Instruct.png","extract all visual details from this image and convert them into a clean, well-structured JSON ""prompt. include sections: ""subject"", ""clothing"", ""hair ,""face"", ""accessories"", ""environment"", ""lighting"" .""camera"", ""style"" 
+
+
+recreate an image based on the following JSON"" ","0","0","Learn","https://huggingface.co/spaces/Qwen/Qwen3-VL-30B-A3B-Demo","[]","0","توليد نفس المشهد - نفس الصورة","0","ميديا","0","false","مجاني","[]","","6942671be942a35a97fa985f","2025-12-17T08:17:31.578000","2025-12-17T08:17:31.578000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://zackproser.com/_next/image?url=https%3A%2F%2Fzackproser.b-cdn.net%2Fimages%2Fwisprflow.webp&w=1920&q=75","The voice-to-text AI that turns speech into clear, polished writing in every app.","0","0","Tool","https://wisprflow.ai/","[""proudactivity""]","0","wisprflow","0","إنتاجية","0","false","مجاني","[]","wisprflow","69425d7e6ab87f3ec690345a","2025-12-17T07:36:30.049000","2025-12-17T07:36:30.049000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://tv.directus.app/assets/ac4ea98a-a6ac-40c7-8c36-89c41992f27d","Netlify: (غالباً ما نستخدمها لسهولتها، حيث يمكن سحب وإفلات مجلد dist أو الربط مع GitHub).
+Vercel: خيار ممتاز آخر لتطبيقات React.
+Firebase Hosting: بما أننا نستخدم Firebase، فهذا أيضاً خيار وارد.","0","0","Tool","https://app.netlify.com/","[]","0","Netlify","0","برمجة","0","false","مجاني","[]","","69425a6c1f4abc68c1ea66ec","2025-12-17T07:23:24.777000","2025-12-17T07:37:01.144000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://d2q9lphzn5ioni.cloudfront.net/uploads/uploads_img/Google-Antigravity.webp","1. ما هو Antigravity؟
+Antigravity هو مساعد برمجي ذكي ومتقدم (Agentic AI Coding Assistant) تم تطويره بواسطة فريق Google Deepmind. يتميز بقدرته على العمل كـ ""مبرمج شريك"" (Pair Programmer)، حيث لا يكتفي بكتابة الأكواد فقط، بل يمكنه فهم هيكلية المشاريع، وتعديل الملفات، وتشغيل الأوامر، والتخطيط للمهام المعقدة وتنفيذها بشكل مستقل داخل بيئة التطوير الخاصة بك.
+
+2. كيف عملنا التطبيق (Masar Samawa - AI Validator)؟
+قمن ببناء التطبيق باستخدام مجموعة من أحدث التقنيات لضمان السرعة والكفاءة:
+
+الأساس (Core): استخدمنا React مع TypeScript لبناء واجهة مستخدم قوية وتفاعلية، مع Vite كأداة بناء (Build Tool) لسرعتها العالية.
+التصميم (Design): اعتمدنا على TailwindCSS لتنسيق الصفحات بشكل عصري وسريع، واستخدمنا Lucide React للأيقونات، و Framer Motion لإضافة تأثيرات حركية (Animations) سلسة.
+الذكاء الاصطناعي (AI): قمنا بدمج Google Gemini API (@google/genai) لتحليل النصوص والمدخلات وتقديم التقييمات الذكية داخل التطبيق.
+الخدمات (Backend/Services): استخدمنا Firebase لإدارة عمليات تسجيل الدخول (Google Auth, Email/Password) وحماية التطبيق.
+آلية العمل: بدأنا المشروع (ربما كقالب جاهز من AI Studio أو إنشاء جديد)، ثم قمنا بالتطوير بشكل تكراري: إضافة الصفحات، ربط الخدمات، تحسين التصميم، وضبط إعدادات 
+vite.config.ts
+ و متغيرات البيئة 
+.env
+.
+
+3. كيف نشرنا التطبيق مجاناً؟
+لنشر التطبيق وجعله متاحاً للعموم (Deployment)، العملية القياسية التي نتبعها مع هذا النوع من التطبيقات تشمل الخطوات التالية:
+
+بناء النسخة النهائية (Build): قمنا بتشغيل الأمر npm run build. هذا الأمر يقوم بضغط وتحويل كل الكود والملفات إلى مجلد صغير يسمى dist جاهز للنشر.
+الاستضافة (Hosting): يتم رفع محتويات مجلد dist إلى منصة استضافة مجانية وسريعة تدعم تطبيقات الويب الحديثة. الخيارات الأكثر شيوعاً التي نستخدمها هنا هي:
+Netlify: (غالباً ما نستخدمها لسهولتها، حيث يمكن سحب وإفلات مجلد dist أو الربط مع GitHub).
+Vercel: خيار ممتاز آخر لتطبيقات React.
+Firebase Hosting: بما أننا نستخدم Firebase، فهذا أيضاً خيار وارد.
+بهذه الطريقة، يتحول الكود من ملفات محلية على جهازك إلى رابط إنترنت يعمل ومتاح لأي شخص في العالم.
+
+","0","0","Tool","https://antigravity.google/","[""aget""]","0","antigravity - برمجة مجانا","0","برمجة","0","false","مجاني","[]","antigravity","69425a12942653880bda4ae0","2025-12-17T07:21:54.173000","2025-12-17T07:37:12.553000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Web Research Prompts
+E-commerce Prompts
+Content Creation Prompts
+Data Extraction Prompts
+Job Application Prompts
+Social Media Prompts
+Productivity Prompts
+Form Filling Prompts
+Testing and QA Prompts
+Multi-Step Workflow Prompts
+Prompt Engineering Best Practices
+Contributing
+","","","Learn","https://docs.google.com/document/d/1uaChBhPmt5PKD29XYJPBsl_2nIdFfhutZALE0opUUjY/edit?usp=sharing","[]","0","browser-use _ awesome-prompts","","أخرى","0","false","مجاني","[]","browser-use","693b086d3532cfbfc81b2c2c","2025-12-11T18:07:41.471000","2025-12-11T18:07:41.471000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","في الفيديو ده هنعرف مع بعض ازاي ممكن نرفع تطبيق ريأكت علي النت مجانا بستخدام ال vercel 
+في البدايه هنرفع الملفات علي Github ثم بعد كدا هيتم رفع الملفات علي النت بستخدام Vercel 
+","","","Tool","https://www.youtube.com/watch?v=H5K3m8RMP3M","[]","0","نشر موقع الكتروني مجانا","","أخرى","0","false","مجاني","[]","","69399a8904786346a5d4f46b","2025-12-10T16:06:33.846000","2025-12-10T16:06:33.846000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Create a high angle CCTV surveillance shot using the uploaded image as the source. Detect every visible person in the image and automatically draw a white rectangular bounding box around each face. For the most prominent person, add a large zoom in inset: a sharp, enhanced close-up of their face displayed in a floating rectangular frame connected with a thin white line.Keep the main image slightly noisy and security camera like (soft grain, slight distortion, muted colors), while the zoom in face box should be clearer, brighter, and more detailed. No text, no timestamps, no overlays except the boxes and connecting line. Maintain the original scene layout, angle, and environment of the uploaded image.","","","Tool","https://cloud.blackbox.ai/","[]","0","اقفش حرامي","","أخرى","0","false","مجاني","[]","","6935347fc993d39892195386","2025-12-07T08:02:07.728000","2025-12-07T08:02:07.728000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Create a real-time interactive 3D particle system with Three.js.
+
+requirements:
+
+1. Control the scaling and expansion of the particle group by detecting the tension and closing of both hands through the camera.
+
+2. Provide panels that can choose hearts/flowers/saturn/Buddha statues/fireworks and other templates
+
+3. Support the colour selector to adjust the particle colour
+
+4. Particles need to respond to gesture changes in real time. The interface is simple and modern.
+
+5. The interface is simple and modern","","","Learn","https://x.com/EHuanglu/status/1995511733138710785","[]","0"," أتفاعل مع مشهد ثلاثي الأبعاد","","أخرى","0","false","مجاني","[]","","692fe5b811f9b9ed7c34d62c","2025-12-03T07:24:40.677000","2025-12-03T07:24:40.677000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Example prompt:
+
+An extreme close-up beauty shot of a young man with a shaggy, sun-bleached blonde haircut. He has striking pale blue eyes that reflect the sky. The camera focuses on the skin texture around his eyes and nose, revealing fine lines, pores, and light, natural stubble. He wears a baby blue turtleneck. The light is diffused and cool. The background is an uninterrupted baby blue sky. Film texture is prominent.","","","Learn","https://cloud.blackbox.ai/","[]","0","صورة أشخاص قريبة ","","أخرى","0","false","مجاني","[]","real close up shot","692c3a4300046bea4dfc5fc2","2025-11-30T12:36:19.880000","2025-11-30T12:36:19.880000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Convert the PDF report to arabic infographic, Ensure
+
+generous empty space between all sections and elements, leave 20-30% of the design as breathing room to boost comprehension by 20% and prevent visual overwhelm, Make the main and clear visual representation of the subject itself at the center of the composition, and with a balanced composition and comfortable margins around it, add big numbers with icons ,charts, statistics, Automatically select the art style and color palette based on the nature of the subject (cultural, health, art, educational, heritage, technology, etc.), with a clean or gradient background, soft cinematic lighting, subtle depth that adds a sense of luxury and realism, and high-quality visual details and realistic textures and shadows, At the top of the poster, place the date entered by the user in a small line in one of the corners, along with a large, strong Arabic title that concisely summarizes the topic, Use small icons or colored dots next to the block titles only, and maintain a clean, organized design with sufficient visual clarity for easy reading, Make the entire poster elegant, sophisticated, and clear, focusing on the hero and the clarity of the information. Ensure high quality and attractive visual details, ready for publication.","","","Learn","https://notebooklm.google.com/","[]","0","Convert the PDF report to arabic infographic","","أخرى","0","false","مجاني","[]","Convert the PDF report to arabic infographic","6924484248d5b0dd3b73567a","2025-11-24T11:57:54.159000","2025-11-24T11:57:54.159000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","*Role:* You are an expert Frontend Web Developer and UI/UX Designer specializing in portfolios for the entertainment industry
+**Goal: ** Create a high-quality, single-file professional portfolio website for a filmmaker based on the content provided below.
+*1. Content & Identity:* * *Name:* [INSERT YOUR NAME HERE * *Role/Title:* [INSERT TITLE, e.q., Director of Photography, Indie Filmmaker Editor] ‣ Bio: * IINSERT A 2-3 SENTENCE BIO * ** Profile Image URL:* [INSERT URL TO YOUR HEADSHOT * """"Visual Vibe:** [DESCRIBE VIBE, e.g., ""Dark, Cinematic, Noir"" OR ""Clean
+Minimalist. White""
+""2. Portfolio Items (Filmography):* Please create a arid layout for the following projects * """"Project 1:** [Title] ([Year]) - Image: [Insert Image URL """"Project 2:* [Titlel ([Year) - Image: [Insert Image URL * *""Project 3:* [Title] ([Year]) - Image: [Insert Image URL, * *Project 4:* [Title] ([Year]) - Image: [Insert Image URL]
+I
+* *(Add more projects as needed)^
+*3. Skills/Equipment:^ Displav the followina- skills visuallv (tags or progress bars):
+"" jSkil 1, e.g., vavinci nesowve
+Req
+* [Skill 2,e.g., Arri Alexa)
+* [Skill3, e-g., Storyboarding]
+""4. Technical Requirements (Strict Constraints):* * *Single File:* Generate a single, self-contained HTML file. Include all CSS and JavaScript within this one file * *Styling:* Use Tailwind CSS via CDN. Do not write custom raw CSS unless necessary for specific animations. * *Responsive:* Must look perfect on mobile, tablet, and desktop * *No Alerts:* Use styled modals or HTML elements for form success messages; never use browser `alért() *Images:* Use the URLs provided above. If a URL fails or is missing, use a hiah-quality placeholder from `https://placehold.co/600x900 * ""Accessibility:* Ensure high contrast text and proper ARIA labels
+*5. UI/UX Structure:* 1. Hero Section:* Immersive layout with the profile image, the Name, the Role. and a ""Watch Reel"" or ""Contact"" CTA button 2. About Section:* The bio provided above 3, *Work/Gallery;* A responsive grid of the portfolio items. Hovering over a poster should reveal the title or a ""View Project"" icon. 4. *Skills Section:* Clean visualization of technical skills 5. *Contact Footer:* A clean contact area with a simulated form (name, email, message) and placeholders for social links (IMDb, Instagram, Vimeo)
+*Final Output:*
+Produce onlv the polished. deplovable, sinale-file HTML code
+
+","","","Learn","https://docs.google.com/document/d/1JxVKcR0BdxnygYVRIDFOxlK0vVEkqrXL43EhcBOA-PM/edit?usp=sharing","[]","0","Gemini3_Prompt_Portfolio_Website","","برمجة","0","false","مجاني","[]","Gemini3_Prompt_Portfolio_Website","6921c87e7eefa66b1c3ca56d","2025-11-22T14:28:14.746000","2025-11-22T14:28:14.746000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://gridinsoft.com/img/scr/site/app-lupaupscaler-com.jpeg","ببساطة بتاخد صورة بايظة، باهتة، متكسّرة… وتقوم راجعة بيها 4K كأنها لسه متصوّرة من كام ساعة.
+","","","Tool","https://app.lupaupscaler.com/","[]","0","lupaupscaler","","تصميم","0","false","مجاني","[]","lupaupscaler","692160be7b1112efbdb0b494","2025-11-22T07:05:34.437000","2025-11-22T07:05:34.437000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","data:image/jpeg;base64,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","تكتب أمر… وهو يفكّره، يخطّطله، وينفّذه.
+من أول كتابة محتوى… لحد أتمتة المتصفح… للربط مع آلاف الخدمات… وكل ده من غير ما تكتب سطر كود واحد تقريبًا.تكتب أمر… وهو يفكّره، يخطّطله، وينفّذه.
+من أول كتابة محتوى… لحد أتمتة المتصفح… للربط مع آلاف الخدمات… وكل ده من غير ما تكتب سطر كود واحد تقريبًا.","","","Tool","https://runable.com/","[]","0","runable","","وكلاء","0","false","freemium","[]","runable","691f3d8e319b8237a000734d","2025-11-20T16:10:54.741000","2025-11-20T16:10:54.741000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","A curated collection of Awesome LLM apps built with RAG, AI Agents, Multi-agent Teams, MCP, Voice Agents, and more. This repository features LLM apps that use models from openai logoOpenAI , anthropic logoAnthropic, google logoGoogle, X logoxAI and open-source models like alibaba logoQwen or meta logoLlama that you can run locally on your computer.","","","Tool","https://github.com/Shubhamsaboo/awesome-llm-apps","[]","0","app with github","","تعلم","0","false","مجاني","[]","","691c5857c21a70897d17b8e3","2025-11-18T11:28:23.286000","2025-11-18T11:28:23.286000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مساعد بموديلات الذكاء الاصطناعي جانبي للصفحة الويب","0","0","Tool","https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb","[]","0","Sider","0","وكلاء","0","false","مجاني","[]","","691c58568513438041863dd3","2025-11-18T11:28:22.348000","2025-12-26T09:15:07.833000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","عمل بوت وربطه بالمواقع - خطة مجانية رائعة","","","Tool","https://botcommerce.app/","[]","0","botcommerce","","وكلاء","0","false","مجاني","[]","","691c58548bbf9ed3d6f4d769","2025-11-18T11:28:20.253000","2025-11-18T11:28:20.253000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://humandeluxe.com/assets/datalab-logos-animated.gif","قراءة النصوص من الصور وكل الملفات بدقة خرافية","","","Tool","https://www.datalab.to/app/playground/documents/new","[""LLMs""]","0","deepseek OCR","","وكلاء","0","false","مجاني","[]","deepseek OCR","691c212c67029b06d88af7be","2025-11-18T07:33:00.811000","2025-11-18T11:28:27.382000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://www.signitysolutions.com/hs-fs/hubfs/Fix%20Coding%20Issues%20with%20Blackbox%20AI.png?width=670&height=445&name=Fix%20Coding%20Issues%20with%20Blackbox%20AI.png","The Best AI Agent for Builders - Transform Ideas into Reality","","","Tool","https://cloud.blackbox.ai/","[""LLM"",""AI Agents"",""RAG"",""OpenAI"",""Anthropic"",""""]","0","blackbox","","وكلاء","0","false","freemium","[]","blackbox AI","691adbc351ba1ad71b40d598","2025-11-17T08:24:35.457000","2025-11-18T11:28:26.308000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://smythos.com/wp-content/uploads/2025/07/KIMI-K2.jpg","Chat with Kimi for Free","","","Tool","https://www.kimi.com/","[""LLMs""]","0","kimi","","وكلاء","0","false","freemium","[]","","691ad0f6134e782e23dd017e","2025-11-17T07:38:30.522000","2025-11-18T11:28:25.302000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"مستودع GitHub شامل لتعلم بناء تطبيقات الذكاء الاصطناعي","https://opengraph.githubassets.com/1/Shubhamsaboo/awesome-llm-apps","مجموعة مختارة من تطبيقات LLM المذهلة المبنية باستخدام RAG، AI Agents، Multi-agent Teams، MCP، Voice Agents وأكثر. يتضمن هذا المستودع تطبيقات تستخدم نماذج من OpenAI وAnthropic وGoogle وxAI ونماذج مفتوحة المصدر مثل Qwen أو Llama التي يمكنك تشغيلها محلياً على جهازك.","","","Learn","https://github.com/Shubhamsaboo/awesome-llm-apps","[""LLM"",""AI Agents"",""RAG"",""OpenAI"",""Anthropic"",""Open Source""]","2","Awesome LLM Apps","","برمجة","0","true","مجاني","[]","Awesome LLM Apps","69172e8adeaff2d26b1198de","2025-11-14T13:28:42.805000","2025-11-14T20:25:55.229000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://lh3.googleusercontent.com/vPwgQnVP-RQs_40JSVgWpiItxYUaUxbOy12xKSpitTLFSsBf9BPHstLBdL-WmUfswiY-DJ9RBAx2R9e0QToTRU32RQ=s1280-w1280-h800","لعمل بروفيال للناس,ومعلومات مهمة عنه","","","Tool","https://www.crystalknows.com/","[]","1","crystalknows","","تسويق","0","false","freemium","[]","crystalknows","691582c6457aaf5a8dd86fe8","2025-11-13T07:03:34.809000","2025-11-18T11:28:19.299000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://media.licdn.com/dms/image/v2/D4E12AQFRi9YtrVzNMw/article-inline_image-shrink_400_744/B4EZdlAdPsHYAg-/0/1749746310111?e=2147483647&v=beta&t=qomLeAst0coXUW_8xLdBROXLzo72pFxa-0nnOOAbI9Q","لتجميع كل الاصدقاء في الحسابات المختلفة","","","Tool","https://happenstance.ai/","[]","0","happenstance","","تسويق","0","false","مجاني","[]","","691582c47ce88e7f267d5023","2025-11-13T07:03:32.558000","2025-11-18T11:28:17.244000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://fireflies.ai/blog/content/images/size/w1200/2023/03/AI-Enhanced-Summary---1.png","لتسجيل الاجتماعات والملاحظات وغيرها","","","Tool","https://fireflies.ai/","[""productivity""]","2","fireflies","","إنتاجية","0","false","freemium","[]","fireflies.ai","6915804e9caa8751c2f35f7d","2025-11-13T06:53:02.368000","2025-11-18T11:28:18.330000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/0f785371-0fff-5b0f-a1ef-9572179ae063/c6254528-b108-5ec5-a865-e48d40503c4b.jpg","موشن - تحريك بال ai - حلو جدًا للوجو","","","Tool","https://app.hera.video/motions","[""Motion""]","0","hera","","ميديا","0","false","مجاني","[]","","6914553ea6be116f67dc5ab7","2025-11-12T09:37:02.534000","2025-11-18T11:28:16.275000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2025/06/base44.jpg","بناء backend للتطبيقات","","","Tool","https://app.base44.com/","[""Vibe Coding""]","2","base44","","برمجة","0","false","مجاني","[]","","6914553d38b21b2f1034ccd4","2025-11-12T09:37:01.511000","2025-11-18T11:28:15.167000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://cdn.prod.website-files.com/61d7d4dc76fa4b0563492a83/688d67f8c280367ca29c64b4_Design%20arena1.png","هتجرب كل الموديلات وهتلاقى تصنيفات ليهم - خطير","","","Tool","https://www.designarena.ai/","[]","2","designarena","","منصات","0","false","freemium","[]","designarena","6914553c3c3dd5c165a7302a","2025-11-12T09:37:00.471000","2025-11-18T11:28:14.214000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TipCAvnaFYaoAwgEOf6arQ.png","بناء backend للتطبيقات، fullstack","","","Tool","https://dashboard.convex.dev/","[]","1","convex","","برمجة","0","false","مجاني","[]","","6914553b4cca250aa2ba753d","2025-11-12T09:36:59.187000","2025-11-18T11:28:13.253000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://i0.wp.com/promptshake.com/wp-content/uploads/2025/10/ltx-2-studio.jpg?w=1280&ssl=1","LTX-2 is an advanced open-source AI video generation","","","Tool","https://app.ltx.studio/ltx-2-playground/t2v","[]","1","LTX: LTX-2 Video Model","","ميديا","0","false","مجاني","[]","","69145538b4fe3af686e2dbc4","2025-11-12T09:36:56.972000","2025-11-18T11:28:09.643000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://beencrypted.com/app/uploads/Gmailnator-1536x786.jpg","temp. emails","","","Tool","https://www.emailnator.com/","[]","2","make emails","","إنتاجية","0","false","مجاني","[]","","69145538384c4fbf78bb442c","2025-11-12T09:36:56.077000","2025-11-18T11:28:08.533000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://lh3.googleusercontent.com/3d8UQA2XDEdWFoFNrHU3Q4OLNd4m40mUtjYpxIiixxo1ulHAr7IvQUpolGrA4n5FpVGkrvnxbbWK6IIDKbM-SlAM3A=s1280-w1280-h800","سكرين شوت كاملة لصفحات الويب","","","Tool","https://gofullpage.com/","[""productivity""]","1","gofullpage","","تسويق","0","false","مجاني","[]","gofullpage","69145537b53cfca9a3220883","2025-11-12T09:36:55.181000","2025-11-18T11:28:07.567000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/laravel-openrouter.png","لا يوجد وصف","","","Tool","https://openrouter.ai/c","[""LLMs""]","2","openrouter ai","","منصات","0","false","freemium","[]","","691455369ec753cb7241ebde","2025-11-12T09:36:54.297000","2025-11-18T11:28:06.553000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://www.kdnuggets.com/wp-content/uploads/bala-ollama.png","Running large language models (LLMs) locally","","","Tool","https://ollama.com/","[""LLMs""]","1","ollama","","محادثة","0","false","مجاني","[]","","69145535e5315f6de93342fe","2025-11-12T09:36:53.218000","2025-11-18T11:28:05.505000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لا يوجد وصف","","","Tool","https://studio.lyzr.ai/agent-builder","[]","0","lyzr","","وكلاء","0","false","مجاني","[]","","691455340a8346698de1614a","2025-11-12T09:36:52.226000","2025-11-18T11:28:04.492000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لا يوجد وصف","","","Tool","https://replit.com/~","[]","0","replit","","برمجة","0","false","مجاني","[]","","691455333f95fe6391ecf081","2025-11-12T09:36:51.388000","2025-11-18T11:28:03.466000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","رائد في توليد الكلام الواقعي واستنساخ الصوت.","","","Tool","https://elevenlabs.io/","[]","0","ElevenLabs","","صوت","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b11","2025-11-12T09:08:13.024000","2025-11-18T11:27:26.120000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتحريك التصاميم والشعارات (اللوجوهات) بالذكاء الاصطناعي.","","","Tool","https://app.hera.video/motions","[]","0","Hera Motion","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b19","2025-11-12T09:08:13.024000","2025-11-18T11:27:35.588000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لجمع بيانات العملاء المحتملين (leads) من لينكدإن.","","","Tool","https://www.careerflow.ai/","[]","0","CareerFlow","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b1c","2025-11-12T09:08:13.024000","2025-11-18T11:27:39.416000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة AI لتوليد رسائل بريد إلكتروني للمبيعات.","","","Tool","https://loveable.ai/","[]","0","Loveable","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b28","2025-11-12T09:08:13.024000","2025-11-18T11:27:51.393000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","https://www.maketecheasier.com/assets/uploads/2025/10/try-all-the-latest-ai-models-for-free-yupp-two-responses-800x377.jpg","محرك بحث يعتمد على المحادثة للحصول على إجابات.","","","Tool","https://yupp.ai/join/early-modern-zebra","[]","0","Yupp","","محادثة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af3","2025-11-12T09:08:13.024000","2025-11-18T11:26:51.989000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مساعد محادثة ذكي ومنافس قوي لـ ChatGPT.","","","Tool","https://claude.ai/","[]","0","Claude","","محادثة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af4","2025-11-12T09:08:13.024000","2025-11-18T11:26:52.964000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتوليد الميديا بالذكاء الاصطناعي.","","","Tool","https://app.reve.com/home","[]","0","Reve","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aff","2025-11-12T09:08:13.024000","2025-11-18T11:27:03.781000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة للنماذج اللغوية الكبيرة من تطوير شركة تنسنت.","","","Tool","https://hunyuan.tencent.com","[]","0","Tencent Hunyuan","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b01","2025-11-12T09:08:13.024000","2025-11-18T11:27:06.137000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لإدارة وجدولة المحتوى على وسائل التواصل الاجتماعي.","","","Tool","https://www.theflick.app/","[]","1","Flick","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b27","2025-11-12T09:08:13.024000","2025-11-18T11:27:50.437000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة شاملة لأدوات التصميم بالذكاء الاصطناعي.","","","","https://www.designarena.ai/","[]","0","DesignArena","","تصميم","0","false","مجاني","","","69144e7d7cb75a5a90c74b3d","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","محرر ملفات PDF مع ميزات ذكية متقدمة.","","","Tool","https://www.sejda.com/pdf-editor","[]","0","Sejda","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b05","2025-11-12T09:08:13.024000","2025-11-18T11:27:11.870000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة متقدمة لاستنساخ وتحويل الصوت.","","","Tool","https://www.minimax.com/","[]","0","Minimax Audio","","صوت","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b0f","2025-11-12T09:08:13.024000","2025-11-18T11:27:23.133000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مغير ومستنسخ صوتي فوري للألعاب والبث.","","","","https://voice.ai/","[]","0","Voice AI","","صوت","0","false","مجاني","","","69144e7d7cb75a5a90c74b12","2025-11-12T09:08:13.024000","2025-11-13T07:02:58.071000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","يعمل موسيقى للفيديو بالذكاء الاصطناعي.","","","Tool","https://huggingface.co/spaces/hkchengrex/MMAudio","[]","0","MMAudio","","صوت","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b15","2025-11-12T09:08:13.024000","2025-11-18T11:27:31.384000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","يقوم بتنزيل الميديا من منصات التواصل الاجتماعي.","","","Tool","https://fsmvid.com/","[]","0","FSMVID","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b1d","2025-11-12T09:08:13.024000","2025-11-18T11:27:40.383000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتحسين محركات الذكاء الاصطناعي (AIO) للبراندات، تجربة 14 يوم مجانية.","","","Tool","https://aicarma.com","[]","0","AICarma","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b21","2025-11-12T09:08:13.024000","2025-11-18T11:27:44.420000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة من جوجل لبناء النماذج الأولية باستخدام Gemini.","","","Tool","https://aistudio.google.com","[]","0","Google AI Studio","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af1","2025-11-12T09:08:13.024000","2025-11-18T11:26:49.935000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","محرك بحث محادثة يقدم إجابات مباشرة مدعومة بالمصادر.","","","Tool","https://www.perplexity.ai/","[]","0","Perplexity","","بحث","0","false","freemium","[]","","69144e7d7cb75a5a90c74af2","2025-11-12T09:08:13.024000","2025-11-18T11:26:50.938000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لإنشاء وتحرير مقاطع الفيديو بسهولة.","","","Tool","https://create.wan.video/","[]","0","WAN Video","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74afc","2025-11-12T09:08:13.024000","2025-11-18T11:27:00.842000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لتحويل الرسومات واللوحات إلى رسوم متحركة.","","","Tool","https://ebsynth.com/","[]","0","Ebsynth","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b07","2025-11-12T09:08:13.024000","2025-11-18T11:27:13.803000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مكتبة أصوات ومنصة استنساخ صوتي للموسيقيين.","","","Tool","https://www.kits.ai/","[]","0","Kits AI","","صوت","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b13","2025-11-12T09:08:13.024000","2025-11-18T11:27:28.878000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لمعرفة التقنيات والأنظمة التي بني بها أي موقع.","","","Tool","https://builtwith.com/","[]","0","BuiltWith","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b1f","2025-11-12T09:08:13.024000","2025-11-18T11:27:42.390000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتوليد الميديا عبر ComfyUI Cloud workflows.","","","Tool","https://nordy.ai/","[]","0","Nordy","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b00","2025-11-12T09:08:13.024000","2025-11-18T11:27:05.163000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة صينية لتوليد الميديا بالذكاء الاصطناعي.","","","Tool","https://yiyan.baidu.com/","[]","0","Baidu Yiyan","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b0d","2025-11-12T09:08:13.024000","2025-11-18T11:27:21.375000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لإرسال وتخصيص الإيميلات بالذكاء الاصطناعي مباشرة من جداول البيانات.","","","Tool","https://sheetsy.co","[]","0","Sheetsy","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b18","2025-11-12T09:08:13.024000","2025-11-18T11:27:34.497000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","إنشاء بريد إلكتروني مؤقت.","","","","https://www.emailnator.com/","[]","0","Make Emails","","إنتاجية","0","false","مجاني","","","69144e7d7cb75a5a90c74b39","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مشاريع وأدوات تجريبية من جوجل في مجال الذكاء الاصطناعي.","","","Tool","https://opal.withgoogle.com","[]","0","Google Opal","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af5","2025-11-12T09:08:13.024000","2025-11-18T11:26:53.938000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","تطبيق تفاعلي لتوليد وتعديل تعابير الوجه ووضعيات الجسم من صورة واحدة.","","","Tool","https://aistudio.google.com/app/apps/drive/1r4kgvxm4VO9ZjQr02G-vJs4rbcig4ppJ?showPreview=true&showAssistant=true","[]","0","مولد تعابير الوجه","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b09","2025-11-12T09:08:13.024000","2025-11-18T11:27:15.772000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لإزالة العلامة المائية من فيديوهات Sora.","","","","https://www.topyappers.com/tools/sora-watermark-remover","[]","0","Sora Watermark Remover","","ميديا","0","false","مجاني","","","69144e7d7cb75a5a90c74b0e","2025-11-12T09:08:13.024000","2025-11-13T07:02:52.959000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","يكشف عن التقنيات المستخدمة في أي موقع، بديل لـ BuiltWith.","","","Tool","https://www.wappalyzer.com/lookup/","[]","0","Wappalyzer","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b20","2025-11-12T09:08:13.024000","2025-11-18T11:27:43.390000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","نموذج لوصف برومبت مثالي للصور والفيديوهات.","","","Tool","https://huggingface.co/spaces/Qwen/Qwen3-VL-30B-A3B-Demo","[]","1","Qwen3-VL Demo","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b31","2025-11-12T09:08:13.024000","2025-11-18T11:28:00.447000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة برمجة وتطوير تطبيقات في المتصفح.","","","","https://replit.com/~","[]","0","Replit","","برمجة","0","false","مجاني","","","69144e7d7cb75a5a90c74b34","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتوليد الميديا والفيديوهات بالذكاء الاصطناعي.","","","Tool","https://higgsfield.ai/","[]","0","Higgsfield","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b29","2025-11-12T09:08:13.024000","2025-11-18T11:27:52.376000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مساعد ذكاء اصطناعي لجداول البيانات (Excel/Sheets).","","","Tool","https://numerous.ai/","[]","0","Numerous AI","","إنتاجية","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b2f","2025-11-12T09:08:13.024000","2025-11-18T11:27:58.439000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتوليد الفيديوهات بالذكاء الاصطناعي.","","","Tool","https://geminigen.ai/app/video-gen/","[]","0","GeminiGen Video","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b32","2025-11-12T09:08:13.024000","2025-11-18T11:28:01.422000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لتوليد ال storyboard للفيديوهات وبرومبات للتحريك.","","","Tool","https://ai.studio/apps/drive/1aEH6f7J2TXUx-GWiZsJp6QPHQ95ykst8","[]","0","مولد الستوري بورد والتحريك","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b33","2025-11-12T09:08:13.024000","2025-11-18T11:28:02.424000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","وكيل ذكاء اصطناعي لبناء العروض التقديمية والمهام.","","","Tool","https://chat.z.ai/","[]","0","Z.AI Chat","","وكلاء","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af0","2025-11-12T09:08:13.024000","2025-11-18T11:26:48.812000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة محادثة متخصصة لتقديم الخبرة الفورية.","0","0","Tool","https://expertex.ai/","[]","0","Expertex","0","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af6","2025-11-12T09:08:13.024000","2025-12-18T15:28:10.804000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لتنزيل الفيديوهات والميديا من منصات التواصل الاجتماعي.","","","Tool","https://www.squidlr.com/","[]","0","Squidlr","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b1e","2025-11-12T09:08:13.024000","2025-11-18T11:27:41.375000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة AI لتحليل الشخصية لفرق المبيعات.","","","Tool","https://www.crystalknows.com/","[]","0","Crystal Knows","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b24","2025-11-12T09:08:13.024000","2025-11-18T11:27:47.389000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","Higgsfield offers a fast, free, and photorealistic AI Face Swap tool designed for creators, marketers, and content professionals. Here’s how it works:","","","Tool","https://higgsfield.ai/app/face-swap","[]","0","Higgsfield: Swap face","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b3b","2025-11-12T09:08:13.024000","2025-11-18T11:28:12.295000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","بناء backend للتطبيقات.","","","","https://dashboard.convex.dev/","[]","0","Convex","","برمجة","0","false","مجاني","","","69144e7d7cb75a5a90c74b3c","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لتحليل وتقارير تحسين محركات البحث (SEO).","","","Tool","https://seomegareport.com/","[]","0","SEO Mega Report","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74afb","2025-11-12T09:08:13.024000","2025-11-18T11:26:59.903000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لتوليد الصور الفنية والإبداعية من النصوص.","","","Tool","https://ideogram.ai","[]","0","Ideogram","","ميديا","0","false","freemium","[]","","69144e7d7cb75a5a90c74afe","2025-11-12T09:08:13.024000","2025-11-18T11:27:02.806000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","وكيل ذكاء اصطناعي لتوليد الأفكار والبحث.","","","Tool","https://www.genspark.ai/","[]","0","Genspark","","وكلاء","0","false","freemium","[]","","69144e7d7cb75a5a90c74b17","2025-11-12T09:08:13.024000","2025-11-18T11:27:33.481000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","دليل ذكي لفهم السوق والمنافسين وتحليل البراندات.","","","Tool","https://ubersuggest.com/","[]","1","Ubersuggest","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b22","2025-11-12T09:08:13.024000","2025-11-18T11:27:45.370000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","صانع سيرة ذاتية (CV) مميز جدا باستخدام الذكاء الاصطناعي.","","","Tool","https://1resume.app/","[]","0","1Resume","","إنتاجية","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b2a","2025-11-12T09:08:13.024000","2025-11-18T11:27:53.355000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","نموذج محادثة قوي من تطوير Alibaba Cloud.","","","Tool","https://chat.qwen.ai/","[]","0","Qwen Chat","","محادثة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af7","2025-11-12T09:08:13.024000","2025-11-18T11:26:55.863000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","وكيل ذكاء اصطناعي للمساعدة في المهام المتعددة.","","","Tool","https://skywork.ai","[]","0","Skywork","","وكلاء","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af8","2025-11-12T09:08:13.024000","2025-11-18T11:26:56.883000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","يستطيع عمل شرائح عرض فني.","","","Tool","https://www.kimi.com/kimiplus/slides","[]","0","Kimi Slides","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74afa","2025-11-12T09:08:13.024000","2025-11-18T11:26:58.906000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","استوديو متكامل لإنشاء مقاطع الفيديو بالذكاء الاصطناعي.","","","Tool","https://app.ltx.studio/","[]","0","LTX Studio","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b03","2025-11-12T09:08:13.024000","2025-11-18T11:27:08.454000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لإنشاء وميديا بطاقات هوية جامعية (ID).","","","Tool","https://eduid.pages.dev/","[]","1","مولد بطاقات الجامعات","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b1b","2025-11-12T09:08:13.024000","2025-11-18T11:27:38.419000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لتعديل الصور بالذكاء الاصطناعي مجانًا.","","","Tool","https://visualgpt.io/","[]","0","VisualGPT","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b30","2025-11-12T09:08:13.024000","2025-11-18T11:27:59.411000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","نموذج AI متقدم مفتوح المصدر لتوليد الفيديو.","","","","https://app.ltx.studio/ltx-2-playground/t2v","[]","0","LTX-2 Video Model","","ميديا","0","false","مجاني","","","69144e7d7cb75a5a90c74b3a","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","رفع جودة الصورة مجانا.","","","Tool","https://imgupscaler.ai/photo-enhancer/","[]","0","Image Upscaler","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b0a","2025-11-12T09:08:13.024000","2025-11-18T11:27:17.156000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لإزالة العناصر غير المرغوب فيها من الصور والفيديو.","","","Tool","https://anieraser.media.io/app/","[]","0","AniEraser","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b0b","2025-11-12T09:08:13.024000","2025-11-18T11:27:19.373000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لاستنساخ الصوت بجودة عالية للمبدعين.","","","Tool","https://fish.audio/","[]","0","Fish Audio","","صوت","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b10","2025-11-12T09:08:13.024000","2025-11-18T11:27:25.159000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لإنشاء مقاطع فيديو من النصوص في دقائق.","","","Tool","https://video.golpoai.com/","[]","0","Golpo AI Video","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b08","2025-11-12T09:08:13.024000","2025-11-18T11:27:14.813000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتوليد الصور والميديا الفنية بالذكاء الاصطناعي.","","","Tool","https://www.lovart.ai/","[]","0","Lovart AI","","برمجة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b1a","2025-11-12T09:08:13.024000","2025-11-18T11:27:36.675000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لتنمية الحسابات على لينكدإن باستخدام AI.","","","Tool","https://www.supergrow.ai/","[]","0","Supergrow","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b25","2025-11-12T09:08:13.024000","2025-11-18T11:27:48.362000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لإنشاء رسائل فيديو مخصصة للمبيعات.","","","Tool","https://www.happenstance.com/","[]","1","Happenstance","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b26","2025-11-12T09:08:13.024000","2025-11-18T11:27:49.382000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مساعد AI لتدوين الملاحظات وتلخيص الاجتماعات.","","","Tool","https://granola.ai/","[]","0","Granola","","إنتاجية","0","false","freemium","[]","","69144e7d7cb75a5a90c74b2b","2025-11-12T09:08:13.024000","2025-11-18T11:27:54.372000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","يحلل موقعك ويصنع DNA خاص بعلامتك التجارية (نغمة، خطوط، ألوان).","","","Tool","https://labs.google.com/pomelli/about/","[]","0","Pomelli","","تسويق","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b23","2025-11-12T09:08:13.024000","2025-11-18T11:27:46.380000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة من جوجل لتدوين الملاحظات والبحث في مستنداتك الخاصة.","","","Tool","https://notebooklm.google.com/","[]","0","Notebook LM","","إنتاجية","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b2e","2025-11-12T09:08:13.024000","2025-11-18T11:27:57.342000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لبناء وكلاء الذكاء الاصطناعي.","","","","https://studio.lyzr.ai/agent-builder","[]","0","Lyzr","","وكلاء","0","false","مجاني","","","69144e7d7cb75a5a90c74b35","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لإدارة المشاريع والأدوات التقنية المبتكرة.","","","Tool","https://dashboard.nanovate.io/","[]","0","Nanovate","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74afd","2025-11-12T09:08:13.024000","2025-11-18T11:27:01.806000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مساعد ذكي من جوجل لتخطيط الوجبات والوصفات.","","","Tool","https://labs.google/fx/tools/whisk","[]","0","Whisk","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b04","2025-11-12T09:08:13.024000","2025-11-18T11:27:10.713000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة سحابية لـ ComfyUI لتوليد الميديا بالذكاء الاصطناعي.","","","Tool","https://www.runninghub.ai/","[]","0","RunningHub","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b0c","2025-11-12T09:08:13.024000","2025-11-18T11:27:20.410000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","بناء backend للتطبيقات.","","","","https://app.base44.com/","[]","0","Base44","","برمجة","0","false","مجاني","","","69144e7d7cb75a5a90c74b3e","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة من جوجل لتوليد وتعديل الصور بالذكاء الاصطناعي.","","","Tool","https://labs.google/fx/tools/image-fx/","[]","0","ImageFX","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b02","2025-11-12T09:08:13.024000","2025-11-18T11:27:07.124000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","استنساخ الأصوات مع 1000 حرف مجاني يوميًا.","","","","https://vocloner.com/","[]","0","Vocloner","","صوت","0","false","مجاني","","","69144e7d7cb75a5a90c74b14","2025-11-12T09:08:13.024000","2025-11-13T07:02:59.376000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مساعد اجتماعات AI يقوم بنسخ وتلخيص المحادثات.","","","Tool","https://fireflies.ai/","[]","0","Fireflies","","إنتاجية","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b2c","2025-11-12T09:08:13.024000","2025-11-18T11:27:55.359000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","بوابة موحدة للوصول لجميع نماذج الذكاء الاصطناعي.","","","","https://openrouter.ai/c","[]","0","OpenRouter AI","","منصات","0","false","مجاني","","","69144e7d7cb75a5a90c74b37","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","نموذج دردشة متخصص في البرمجة والمهام التقنية.","","","Tool","https://chat.deepseek.com/","[]","0","DeepSeek Chat","","محادثة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74af9","2025-11-12T09:08:13.024000","2025-11-18T11:26:57.853000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","نموذج لتحويل النص إلى فيديو من OpenAI.","","","Tool","https://sora.chatgpt.com/","[]","0","Sora","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b06","2025-11-12T09:08:13.024000","2025-11-18T11:27:12.848000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتحويل الصوت إلى نص (نسخ صوتي).","","","Tool","https://whspr.ai/","[]","0","Flow (WhisperFlow)","","صوت","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b16","2025-11-12T09:08:13.024000","2025-11-18T11:27:32.429000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","أداة لنسخ وتلخيص الاجتماعات والمحادثات الصوتية.","","","Tool","https://otter.ai/","[]","0","Otter.ai","","إنتاجية","0","false","مجاني","[]","","69144e7d7cb75a5a90c74b2d","2025-11-12T09:08:13.024000","2025-11-18T11:27:56.330000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","تشغيل نماذج اللغة الكبيرة محلياً.","","","","https://ollama.com/","[]","0","Ollama","","محادثة","0","false","مجاني","","","69144e7d7cb75a5a90c74b36","2025-11-12T09:08:13.024000","2025-11-12T09:08:13.024000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","يوفر API مجاني لنتائج بحث جوجل.","","","Tool","https://serper.dev/dashboard","[]","0","Serper API","","برمجة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aeb","2025-11-12T09:08:13.023000","2025-11-18T11:26:43.776000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","مكتبة ضخمة من الأصول الإبداعية والجاهزة للاستخدام.","","","Tool","https://elements.envato.com","[]","0","Envato Elements","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aed","2025-11-12T09:08:13.023000","2025-11-18T11:26:45.790000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة مقارنة وتوليد للميديا بالذكاء الاصطناعي.","","","Tool","https://lmarena.ai/","[]","0","LM Arena","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aec","2025-11-12T09:08:13.023000","2025-11-18T11:26:44.754000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة لتوليد الميديا بالذكاء الاصطناعي عبر ComfyUI Cloud.","","","Tool","https://app.weavy.ai/","[]","0","Weavy","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74ae9","2025-11-12T09:08:13.023000","2025-11-18T11:26:41.713000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","محرر صور يعمل بالذكاء الاصطناعي.","","","Tool","https://phot.ai/","[]","0","Phot AI","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aee","2025-11-12T09:08:13.023000","2025-11-18T11:26:46.771000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة وكلاء ذكاء اصطناعي متقدمة.","","","Tool","https://agent.minimax.io/","[]","0","Minimax Agent","","وكلاء","0","false","مجاني","[]","","69144e7d7cb75a5a90c74ae5","2025-11-12T09:08:13.023000","2025-11-18T11:26:37.001000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","منصة مجتمعية لبناء وتدريب ونشر نماذج تعلم الآلة.","","","Tool","https://huggingface.co/","[]","0","Hugging Face","","منصات","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aef","2025-11-12T09:08:13.023000","2025-11-18T11:26:47.740000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لتعديل الصور وعمل ستوريبورد ولقطات سينمائية باستخدام نموذج Qwen.","","","Tool","https://www.runninghub.ai/ai-detail/1978885072088633345","[]","0","وركفلو Qwen السينمائي","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74aea","2025-11-12T09:08:13.023000","2025-11-18T11:26:42.838000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","وكيلة AI متخصصة في المبيعات ودعم العملاء.","","","Tool","https://www.emily.ai/","[]","0","Emily AI","","وكلاء","0","false","مجاني","[]","","69144e7d7cb75a5a90c74ae6","2025-11-12T09:08:13.023000","2025-11-18T11:26:38.685000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","لإنشاء تطبيقات الويب والموبايل كاملة بالذكاء الاصطناعي.","","","Tool","https://blink.new/","[]","0","Blink","","برمجة","0","false","مجاني","[]","","69144e7d7cb75a5a90c74ae8","2025-11-12T09:08:13.023000","2025-11-18T11:26:40.697000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
+"","","واجهة رسومية لتشغيل نماذج Stable Diffusion.","","","Tool","http://www.runcomfy.com","[]","0","RunComfy","","ميديا","0","false","مجاني","[]","","69144e7d7cb75a5a90c74ae7","2025-11-12T09:08:13.023000","2025-11-18T11:26:39.680000","69143ebb0a84cea3d7bde829","omarsamawah@gmail.com","false"
