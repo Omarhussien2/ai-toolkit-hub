@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Bookmark, Code2, ExternalLink, Filter, Search, Star, Zap, Pencil } from "lucide-react";
 import type { Category, Tool, ToolType } from "@/lib/types";
+import { searchTools } from "@/lib/tool-search";
 import { formatPricing, typeLabel } from "@/lib/utils";
 import { getSupabaseBrowserClient } from "@/lib/supabase/browser";
 
@@ -70,33 +71,21 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
   }, [initialIsAdmin]);
 
   const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    return tools
+    const baseTools = tools
       .filter((tool) => (type === "all" ? true : tool.type === type))
       .filter((tool) => (category === ALL_CATEGORIES ? true : tool.category === category))
-      .filter((tool) => (pricing === "all" ? true : tool.pricing === pricing))
-      .filter((tool) => {
-        if (!needle) return true;
-        return [
-          tool.name,
-          tool.name_en,
-          tool.description,
-          tool.domain,
-          tool.github_full_name,
-          tool.github_language,
-          ...(tool.tags ?? []),
-          ...(tool.use_cases ?? []),
-          ...(tool.libraries ?? []),
-        ]
-          .filter(Boolean)
-          .some((value) => String(value).toLowerCase().includes(needle));
-      })
-      .sort((a, b) => {
-        if (sort === "name") return a.name.localeCompare(b.name, "ar");
-        if (sort === "featured") return Number(b.is_featured) - Number(a.is_featured);
-        if (sort === "pricing") return a.pricing.localeCompare(b.pricing);
-        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
-      });
+      .filter((tool) => (pricing === "all" ? true : tool.pricing === pricing));
+
+    const searchedTools = query.trim() ? searchTools(baseTools, query) : baseTools;
+
+    if (query.trim()) return searchedTools;
+
+    return searchedTools.sort((a, b) => {
+      if (sort === "name") return a.name.localeCompare(b.name, "ar");
+      if (sort === "featured") return Number(b.is_featured) - Number(a.is_featured);
+      if (sort === "pricing") return a.pricing.localeCompare(b.pricing);
+      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+    });
   }, [tools, type, category, pricing, query, sort]);
 
   return (
