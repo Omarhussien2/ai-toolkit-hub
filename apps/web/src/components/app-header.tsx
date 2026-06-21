@@ -18,12 +18,12 @@ export function AppHeader() {
       <div className="mx-auto flex min-h-16 w-full max-w-7xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:justify-between md:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/brand-icon.svg"
+            src="/brand-icon.png"
             alt="MyToolkit Logo"
-            width={40}
+            width={56}
             height={40}
             priority
-            className="rounded-lg object-cover shadow-sm"
+            className="h-10 w-14 object-contain"
           />
           <span>
             <span className="block text-lg font-extrabold">MyToolkit</span>
