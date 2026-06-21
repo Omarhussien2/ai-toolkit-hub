@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
+import { Geist_Mono, Alexandria } from "next/font/google";
 import "./globals.css";
 
-const arabicSans = Noto_Sans_Arabic({
-  variable: "--font-arabic-sans",
+const alexandria = Alexandria({
+  variable: "--font-alexandria",
   subsets: ["arabic"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const geistMono = Geist_Mono({
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${arabicSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${alexandria.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full font-sans">{children}</body>
     </html>

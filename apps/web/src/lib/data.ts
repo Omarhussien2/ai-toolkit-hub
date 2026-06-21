@@ -190,3 +190,64 @@ export async function getCategories() {
   if (error || !data) return getSeedCategories();
   return data satisfies Category[];
 }
+
+export async function getToolById(id: string): Promise<Tool | null> {
+  const supabase = getPublicSupabaseClient();
+  if (!supabase) {
+    const tool = seed.tools.find((item, index) => (item.legacy_id === id || `seed-${index}` === id));
+    if (!tool) return null;
+    const index = seed.tools.indexOf(tool);
+    return mapSeedTool(tool, index);
+  }
+
+  const { data, error } = await supabase
+    .from("tools")
+    .select("*, categories:category_id(slug,name_ar,name_en,color,sort_order)")
+    .eq("id", id)
+    .maybeSingle();
+
+  if (error || !data) return null;
+
+  const item = data as SupabaseToolRow;
+  return {
+    id: item.id,
+    legacy_id: item.legacy_id,
+    name: item.name,
+    name_en: item.name_en,
+    description: item.description,
+    type: item.type,
+    category_id: item.category_id,
+    category: item.categories?.name_ar ?? item.category_name ?? "أخرى",
+    category_slug: item.categories?.slug,
+    category_color: item.categories?.color ?? "#14b8a6",
+    url: item.url,
+    normalized_url: item.normalized_url,
+    domain: item.domain,
+    image_url: item.image_url,
+    favicon_url: item.favicon_url,
+    pricing: item.pricing,
+    tags: item.tags ?? [],
+    use_cases: item.use_cases ?? [],
+    libraries: item.libraries ?? [],
+    notes: item.notes,
+    github_owner: item.github_owner,
+    github_repo: item.github_repo,
+    github_full_name: item.github_full_name,
+    github_stars: item.github_stars,
+    github_forks: item.github_forks,
+    github_language: item.github_language,
+    github_license: item.github_license,
+    github_topics: item.github_topics ?? [],
+    github_pushed_at: item.github_pushed_at,
+    status: item.status,
+    is_featured: item.is_featured,
+    usage_count: item.usage_count ?? 0,
+    favorite_count: item.favorite_count ?? 0,
+    average_rating: Number(item.average_rating ?? 0),
+    review_count: item.review_count ?? 0,
+    sort_order: item.sort_order ?? 0,
+    created_by_email: item.created_by_email,
+    created_at: item.created_at,
+    updated_at: item.updated_at,
+  };
+}

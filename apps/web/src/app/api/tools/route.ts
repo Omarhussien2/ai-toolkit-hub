@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { getCurrentUserAndProfile } from "@/lib/supabase/server";
 import { getDomain, normalizeUrl, slugify } from "@/lib/utils";
@@ -102,6 +103,8 @@ export async function POST(request: NextRequest) {
     tool_name: data.name,
     details: "Created from capture flow",
   });
+
+  revalidatePath("/", "layout");
 
   return NextResponse.json({ message: "تم حفظ الأداة.", tool: data });
 }

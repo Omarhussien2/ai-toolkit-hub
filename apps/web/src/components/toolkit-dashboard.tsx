@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Bookmark, Code2, ExternalLink, Filter, Search, Star, Zap } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Bookmark, Code2, ExternalLink, Filter, Search, Star, Zap, Pencil } from "lucide-react";
 import type { Category, Tool, ToolType } from "@/lib/types";
 import { formatPricing, typeLabel } from "@/lib/utils";
 import { getSupabaseBrowserClient } from "@/lib/supabase/browser";
@@ -12,27 +12,68 @@ type Props = {
   title: string;
   subtitle: string;
   defaultType?: ToolType;
+  initialIsAdmin?: boolean;
 };
 
 const sortOptions = [
-  { value: "recent", label: "الأحدث" },
-  { value: "name", label: "أبجديًا" },
-  { value: "featured", label: "المميزة" },
-  { value: "pricing", label: "المجانية أولًا" },
+  { value: "recent", label: "Ø§Ù„Ø£Ø­Ø¯Ø«" },
+  { value: "name", label: "Ø£Ø¨Ø¬Ø¯ÙŠÙ‹Ø§" },
+  { value: "featured", label: "Ø§Ù„Ù…Ù…ÙŠØ²Ø©" },
+  { value: "pricing", label: "Ø§Ù„Ù…Ø¬Ø§Ù†ÙŠØ© Ø£ÙˆÙ„Ù‹Ø§" },
 ];
 
-export function ToolkitDashboard({ tools, categories, title, subtitle, defaultType }: Props) {
+export function ToolkitDashboard({ tools, categories, title, subtitle, defaultType, initialIsAdmin = false }: Props) {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("الكل");
+  const [category, setCategory] = useState("Ø§Ù„ÙƒÙ„");
   const [type, setType] = useState<ToolType | "all">(defaultType ?? "all");
   const [pricing, setPricing] = useState("all");
   const [sort, setSort] = useState("recent");
+  const [isAdmin, setIsAdmin] = useState(initialIsAdmin);
+
+  useEffect(() => {
+    const supabase = getSupabaseBrowserClient();
+    if (!supabase) return;
+
+    async function checkAdmin(user: { id: string; email?: string | null } | null) {
+      if (!user || !supabase) {
+        setIsAdmin(false);
+        return;
+      }
+
+      if (user.email?.trim().toLowerCase() === "omarsamawah@gmail.com") {
+        setIsAdmin(true);
+        return;
+      }
+
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      setIsAdmin(profile?.role === "admin");
+    }
+
+    // Check initial user
+    supabase.auth.getUser().then(({ data }) => {
+      checkAdmin(data.user).catch(console.error);
+    });
+
+    // Listen to changes
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      checkAdmin(session?.user ?? null).catch(console.error);
+    });
+
+    return () => {
+      listener.subscription.unsubscribe();
+    };
+  }, [initialIsAdmin]);
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return tools
       .filter((tool) => (type === "all" ? true : tool.type === type))
-      .filter((tool) => (category === "الكل" ? true : tool.category === category))
+      .filter((tool) => (category === "Ø§Ù„ÙƒÙ„" ? true : tool.category === category))
       .filter((tool) => (pricing === "all" ? true : tool.pricing === pricing))
       .filter((tool) => {
         if (!needle) return true;
@@ -73,11 +114,11 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
         </div>
 
         <div className="rounded-lg border border-border bg-card p-4 shadow-sm">
-          <div className="text-sm font-bold text-zinc-500">المحتوى الحالي</div>
+          <div className="text-sm font-bold text-zinc-500">Ø§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„Ø­Ø§Ù„ÙŠ</div>
           <div className="mt-3 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
-            <Metric label="كل النتائج" value={tools.length} />
-            <Metric label="أدوات" value={tools.filter((tool) => tool.type === "tool").length} />
-            <Metric label="تعلم" value={tools.filter((tool) => tool.type === "learn").length} />
+            <Metric label="ÙƒÙ„ Ø§Ù„Ù†ØªØ§Ø¦Ø¬" value={tools.length} />
+            <Metric label="Ø£Ø¯ÙˆØ§Øª" value={tools.filter((tool) => tool.type === "tool").length} />
+            <Metric label="ØªØ¹Ù„Ù…" value={tools.filter((tool) => tool.type === "learn").length} />
             <Metric label="GitHub" value={tools.filter((tool) => tool.type === "github").length} />
           </div>
         </div>
@@ -90,7 +131,7 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="ابحث بالاسم، الوصف، الدومين، أو الوسوم"
+              placeholder="Ø§Ø¨Ø­Ø« Ø¨Ø§Ù„Ø§Ø³Ù…ØŒ Ø§Ù„ÙˆØµÙØŒ Ø§Ù„Ø¯ÙˆÙ…ÙŠÙ†ØŒ Ø£Ùˆ Ø§Ù„ÙˆØ³ÙˆÙ…"
               className="h-12 w-full rounded-md border border-border bg-background pr-10 pl-3 text-sm font-semibold outline-none focus:border-primary"
             />
           </label>
@@ -99,7 +140,7 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
             onChange={(event) => setCategory(event.target.value)}
             className="h-12 rounded-md border border-border bg-background px-3 text-sm font-bold"
           >
-            <option>الكل</option>
+            <option>Ø§Ù„ÙƒÙ„</option>
             {categories.map((item) => (
               <option key={item.slug} value={item.name_ar}>
                 {item.name_ar}
@@ -111,11 +152,11 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
             onChange={(event) => setPricing(event.target.value)}
             className="h-12 rounded-md border border-border bg-background px-3 text-sm font-bold"
           >
-            <option value="all">كل الأسعار</option>
-            <option value="free">مجاني</option>
+            <option value="all">ÙƒÙ„ Ø§Ù„Ø£Ø³Ø¹Ø§Ø±</option>
+            <option value="free">Ù…Ø¬Ø§Ù†ÙŠ</option>
             <option value="freemium">Freemium</option>
-            <option value="paid">مدفوع</option>
-            <option value="unknown">غير محدد</option>
+            <option value="paid">Ù…Ø¯ÙÙˆØ¹</option>
+            <option value="unknown">ØºÙŠØ± Ù…Ø­Ø¯Ø¯</option>
           </select>
           <select
             value={sort}
@@ -138,7 +179,7 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
               type === "tool" ? "bg-primary text-primary-foreground" : "bg-muted"
             }`}
           >
-            أدوات
+            Ø£Ø¯ÙˆØ§Øª
           </button>
           <button
             type="button"
@@ -147,7 +188,7 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
               type === "learn" ? "bg-accent text-white" : "bg-muted"
             }`}
           >
-            تعلم
+            ØªØ¹Ù„Ù…
           </button>
           <button
             type="button"
@@ -161,20 +202,20 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
           </button>
           <span className="inline-flex items-center gap-2 text-sm font-bold text-zinc-500">
             <Filter className="h-4 w-4" />
-            {filtered.length} نتيجة
+            {filtered.length} Ù†ØªÙŠØ¬Ø©
           </span>
         </div>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {filtered.map((tool) => (
-          <ToolCard key={tool.id} tool={tool} />
+          <ToolCard key={tool.id} tool={tool} isAdmin={isAdmin} />
         ))}
       </div>
 
       {filtered.length === 0 && (
         <div className="mt-8 rounded-lg border border-dashed border-border bg-card p-10 text-center">
-          <p className="font-bold">لا توجد نتائج مطابقة. جرّب تعديل الفلاتر أو كلمات البحث.</p>
+          <p className="font-bold">Ù„Ø§ ØªÙˆØ¬Ø¯ Ù†ØªØ§Ø¦Ø¬ Ù…Ø·Ø§Ø¨Ù‚Ø©. Ø¬Ø±Ù‘Ø¨ ØªØ¹Ø¯ÙŠÙ„ Ø§Ù„ÙÙ„Ø§ØªØ± Ø£Ùˆ ÙƒÙ„Ù…Ø§Øª Ø§Ù„Ø¨Ø­Ø«.</p>
         </div>
       )}
     </section>
@@ -190,13 +231,13 @@ function Metric({ label, value }: { label: string; value: number }) {
   );
 }
 
-function ToolCard({ tool }: { tool: Tool }) {
+function ToolCard({ tool, isAdmin }: { tool: Tool; isAdmin: boolean }) {
   const [favoriteState, setFavoriteState] = useState<"idle" | "saving" | "done">("idle");
 
   async function favorite() {
     const supabase = getSupabaseBrowserClient();
     if (!supabase) {
-      alert("أضف إعدادات Supabase لتفعيل المفضلة.");
+      alert("Ø£Ø¶Ù Ø¥Ø¹Ø¯Ø§Ø¯Ø§Øª Supabase Ù„ØªÙØ¹ÙŠÙ„ Ø§Ù„Ù…ÙØ¶Ù„Ø©.");
       return;
     }
     setFavoriteState("saving");
@@ -204,7 +245,7 @@ function ToolCard({ tool }: { tool: Tool }) {
       data: { user },
     } = await supabase.auth.getUser();
     if (!user) {
-      alert("سجل الدخول أولًا.");
+      alert("Ø³Ø¬Ù„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø£ÙˆÙ„Ù‹Ø§.");
       setFavoriteState("idle");
       return;
     }
@@ -229,14 +270,14 @@ function ToolCard({ tool }: { tool: Tool }) {
         {tool.is_featured && (
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-md bg-amber-300 px-2 py-1 text-xs font-black text-zinc-900">
             <Star className="h-3 w-3 fill-current" />
-            مميز
+            Ù…Ù…ÙŠØ²
           </span>
         )}
       </div>
 
       <div className="flex flex-1 flex-col p-4">
         <div className="flex flex-wrap gap-2">
-          <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{tool.category ?? "أخرى"}</span>
+          <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{tool.category ?? "Ø£Ø®Ø±Ù‰"}</span>
           <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{formatPricing(tool.pricing)}</span>
           <span className="rounded-md bg-muted px-2 py-1 text-xs font-black">{typeLabel(tool.type)}</span>
         </div>
@@ -270,13 +311,22 @@ function ToolCard({ tool }: { tool: Tool }) {
             className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md bg-primary px-3 text-sm font-black text-primary-foreground"
           >
             <ExternalLink className="h-4 w-4" />
-            زيارة
+            Ø²ÙŠØ§Ø±Ø©
           </a>
+          {isAdmin && (
+            <a
+              href={`/admin/edit/${tool.id}`}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card hover:bg-muted text-primary"
+              title="ØªØ¹Ø¯ÙŠÙ„ Ø§Ù„Ø£Ø¯Ø§Ø©"
+            >
+              <Pencil className="h-4 w-4" />
+            </a>
+          )}
           <button
             type="button"
             onClick={favorite}
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-card"
-            title="إضافة للمفضلة"
+            title="Ø¥Ø¶Ø§ÙØ© Ù„Ù„Ù…ÙØ¶Ù„Ø©"
           >
             <Bookmark className={`h-4 w-4 ${favoriteState === "done" ? "fill-primary text-primary" : ""}`} />
           </button>

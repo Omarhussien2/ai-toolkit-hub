@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = "http://localhost:3000";
+const DEFAULT_BASE_URL = "https://web-sigma-eight-44.vercel.app";
 
 const baseUrlInput = document.querySelector<HTMLInputElement>("#baseUrl")!;
 const saveSettingsButton = document.querySelector<HTMLButtonElement>("#saveSettings")!;

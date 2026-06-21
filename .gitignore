@@ -10,6 +10,9 @@ build/
 .output/
 .wxt/
 .vercel/
+apps/**/.vercel/
+supabase/.temp/
+scratch/
 coverage/
 *.zip
 *.log

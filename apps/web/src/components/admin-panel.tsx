@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Database, Download, FileSpreadsheet, Loader2, Upload } from "lucide-react";
-import { AuthButtons } from "@/components/auth-buttons";
 import type { Category, Tool } from "@/lib/types";
 
 type Props = {
@@ -39,16 +38,22 @@ export function AdminPanel({ isAdmin, userEmail, tools, categories }: Props) {
           <h1 className="text-3xl font-extrabold md:text-4xl">الإدارة والنسخ الاحتياطي</h1>
           <p className="mt-2 text-sm text-zinc-500">الحساب الحالي: {userEmail ?? "غير مسجل"}</p>
         </div>
-        <AuthButtons />
       </div>
 
       {!isAdmin && (
         <div className="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-5 text-amber-950 dark:bg-amber-950 dark:text-amber-50">
-          <h2 className="font-black">تحتاج صلاحية أدمن</h2>
-          <p className="mt-2 leading-7">
-            بعد تسجيل الدخول ببريد <span className="font-mono">omarsamawah@gmail.com</span> شغّل أمر Admin bootstrap
-            الموجود آخر ملف `supabase/migrations/0001_init.sql` من Supabase SQL Editor.
-          </p>
+          <h2 className="font-black">{userEmail ? "هذا الحساب ليس أدمن" : "سجّل الدخول بالبريد الإداري"}</h2>
+          {userEmail ? (
+            <p className="mt-2 leading-7">
+              أنت مسجل حاليًا ببريد <span className="font-mono">{userEmail}</span>. اخرج ثم ادخل ببريد{" "}
+              <span className="font-mono">omarsamawah@gmail.com</span> لفتح أدوات الإدارة.
+            </p>
+          ) : (
+            <p className="mt-2 leading-7">
+              اكتب بريد <span className="font-mono">omarsamawah@gmail.com</span> في خانة الدخول بالأعلى، ثم اضغط
+              رابط الدخول الذي سيصلك على البريد. لا تحتاج أي إعداد يدوي إضافي.
+            </p>
+          )}
         </div>
       )}
 
@@ -60,36 +65,18 @@ export function AdminPanel({ isAdmin, userEmail, tools, categories }: Props) {
         <Metric label="GitHub" value={tools.filter((tool) => tool.type === "github").length} icon={Database} />
       </div>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-3">
-        <ActionCard
-          title="استيراد بيانات Base44"
-          description="يدخل seed JSON المنظف إلى Supabase. يتطلب أدمن."
-          button="استيراد"
-          icon={Upload}
-          disabled={!isAdmin || busy !== ""}
-          loading={busy === "/api/admin/import-seed"}
-          onClick={() => runAction("/api/admin/import-seed", { method: "POST" })}
-        />
-        <ActionCard
-          title="Backup إلى Google Sheets"
-          description="يرسل الأدوات المنشورة إلى Google Sheets إذا كانت env جاهزة."
-          button="تشغيل Backup"
-          icon={FileSpreadsheet}
-          disabled={!isAdmin || busy !== ""}
-          loading={busy === "/api/backups/google-sheets"}
-          onClick={() => runAction("/api/backups/google-sheets", { method: "POST" })}
-        />
-        <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
+      <div className="mt-6">
+        <div className="rounded-lg border border-border bg-card p-5 shadow-sm md:w-1/3">
           <Download className="h-6 w-6 text-primary" />
           <h2 className="mt-3 text-xl font-black">تصدير الملفات</h2>
           <p className="mt-2 min-h-14 text-sm leading-7 text-zinc-600 dark:text-zinc-300">
             حمل نسخة CSV أو Excel من البيانات الحالية.
           </p>
           <div className="mt-5 flex gap-2">
-            <a href="/api/export?format=csv" className="rounded-md bg-muted px-4 py-2 text-sm font-black">
+            <a href="/api/export?format=csv" className="rounded-md bg-muted px-4 py-2 text-sm font-black transition-colors hover:bg-muted/80">
               CSV
             </a>
-            <a href="/api/export?format=xlsx" className="rounded-md bg-primary px-4 py-2 text-sm font-black text-primary-foreground">
+            <a href="/api/export?format=xlsx" className="rounded-md bg-primary px-4 py-2 text-sm font-black text-primary-foreground shadow transition-colors hover:bg-primary/90">
               Excel
             </a>
           </div>

@@ -20,20 +20,20 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
-  --font-sans: "Noto Sans Arabic", "Noto Sans Arabic Fallback", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Alexandria", "Alexandria Fallback", "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #111111;
-    --foreground: #f4f4f5;
-    --muted: #1f1f1f;
-    --card: #171717;
-    --border: #303030;
+    --background: #09090b;
+    --foreground: #fafafa;
+    --muted: #27272a;
+    --card: #18181b;
+    --border: #3f3f46;
     --primary: #14b8a6;
-    --primary-foreground: #062a27;
-    --accent: #fb923c;
+    --primary-foreground: #042f2e;
+    --accent: #f97316;
   }
 }
 

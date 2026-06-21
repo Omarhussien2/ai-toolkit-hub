@@ -9,6 +9,11 @@ let client: SupabaseClient | null = null;
 export function getSupabaseBrowserClient(): SupabaseClient | null {
   const env = getSupabasePublicEnv();
   if (!env.enabled || !env.url || !env.key) return null;
-  client ??= createBrowserClient(env.url, env.key);
-  return client;
+  try {
+    client ??= createBrowserClient(env.url, env.key);
+    return client;
+  } catch (error) {
+    console.error("Failed to initialize Supabase browser client:", error);
+    return null;
+  }
 }

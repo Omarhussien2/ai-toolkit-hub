@@ -1,7 +1,20 @@
 import { AppHeader } from "@/components/app-header";
-import { CAPTURE_BOOKMARKLET } from "@/lib/constants";
+import { headers } from "next/headers";
 
-export default function BookmarkletPage() {
+function buildBookmarklet(baseUrl: string) {
+  const safeBaseUrl = JSON.stringify(baseUrl.replace(/\/$/, ""));
+  return `javascript:(()=>{const u=encodeURIComponent(location.href);const t=encodeURIComponent(document.title);open(${safeBaseUrl}+'/capture/new?url='+u+'&title='+t,'_blank','noopener')})()`;
+}
+
+export default async function BookmarkletPage() {
+  const requestHeaders = await headers();
+  const forwardedHost = requestHeaders.get("x-forwarded-host") || requestHeaders.get("host");
+  const forwardedProto = requestHeaders.get("x-forwarded-proto") || "https";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_APP_URL ||
+    (forwardedHost ? `${forwardedProto}://${forwardedHost}` : "https://web-sigma-eight-44.vercel.app");
+  const bookmarklet = buildBookmarklet(baseUrl);
+
   return (
     <main className="min-h-screen">
       <AppHeader />
@@ -13,13 +26,13 @@ export default function BookmarkletPage() {
             اسحب الزر التالي إلى شريط المفضلة في المتصفح. عند فتح أي موقع اضغط عليه لفتح صفحة مراجعة الرابط.
           </p>
           <a
-            href={CAPTURE_BOOKMARKLET}
+            href={bookmarklet}
             className="mt-6 inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 text-sm font-bold text-primary-foreground"
           >
             حفظ في MyToolkit
           </a>
           <pre className="mt-6 overflow-auto rounded-md bg-muted p-4 text-left text-xs ltr" dir="ltr">
-            {CAPTURE_BOOKMARKLET}
+            {bookmarklet}
           </pre>
         </div>
       </section>
