@@ -1,7 +1,7 @@
 export function sanitizeEnvValue(value: string | undefined): string | undefined {
   if (!value) return undefined;
 
-  // 1. Remove all control characters (0x00-0x1F, 0x7F) and any non-ASCII characters (> 127)
+  // Keep only printable ASCII to prevent invalid fetch headers from copied keys.
   let cleaned = "";
   for (let i = 0; i < value.length; i++) {
     const code = value.charCodeAt(i);
@@ -12,7 +12,6 @@ export function sanitizeEnvValue(value: string | undefined): string | undefined 
 
   cleaned = cleaned.trim();
 
-  // 2. Remove leading/trailing quotes (single or double) recursively
   while (
     cleaned.startsWith('"') ||
     cleaned.startsWith("'") ||
@@ -47,21 +46,21 @@ export function validateSupabaseEnv(
   key: string | undefined
 ): { isValid: boolean; error?: string } {
   if (!url) {
-    return { isValid: false, error: "Ø¹Ù†ÙˆØ§Ù† Supabase URL ØºÙŠØ± Ù…ØªÙˆÙØ± ÙÙŠ Ù…ØªØºÙŠØ±Ø§Øª Ø§Ù„Ø¨ÙŠØ¦Ø©." };
+    return { isValid: false, error: "عنوان Supabase URL غير متوفر في متغيرات البيئة." };
   }
   if (!key) {
-    return { isValid: false, error: "Ù…ÙØªØ§Ø­ Supabase Publishable Key ØºÙŠØ± Ù…ØªÙˆÙØ± ÙÙŠ Ù…ØªØºÙŠØ±Ø§Øª Ø§Ù„Ø¨ÙŠØ¦Ø©." };
+    return { isValid: false, error: "مفتاح Supabase Publishable Key غير متوفر في متغيرات البيئة." };
   }
 
   if (!url.startsWith("https://")) {
-    return { isValid: false, error: "Ø¹Ù†ÙˆØ§Ù† Supabase URL ØºÙŠØ± ØµØ§Ù„Ø­ (ÙŠØ¬Ø¨ Ø£Ù† ÙŠØ¨Ø¯Ø£ Ø¨Ù€ https://)." };
+    return { isValid: false, error: "عنوان Supabase URL غير صالح ويجب أن يبدأ بـ https://." };
   }
 
   const isValidKey = key.startsWith("sb_publishable_") || isJWT(key);
   if (!isValidKey) {
     return {
       isValid: false,
-      error: "Ù…ÙØªØ§Ø­ Supabase ØºÙŠØ± ØµØ§Ù„Ø­ (ÙŠØ¬Ø¨ Ø£Ù† ÙŠØ¨Ø¯Ø£ Ø¨Ù€ sb_publishable_ Ø£Ùˆ ÙŠÙƒÙˆÙ† Ø±Ù…Ø² JWT ØµØ§Ù„Ø­Ù‹Ø§).",
+      error: "مفتاح Supabase غير صالح. يجب أن يبدأ بـ sb_publishable_ أو يكون رمز JWT صالحًا.",
     };
   }
 
