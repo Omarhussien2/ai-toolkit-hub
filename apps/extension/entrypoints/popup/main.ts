@@ -1,4 +1,5 @@
-const DEFAULT_BASE_URL = "https://web-sigma-eight-44.vercel.app";
+const DEFAULT_BASE_URL = "https://mytoolkit-hub.vercel.app";
+const LEGACY_BASE_URLS = new Set(["https://web-sigma-eight-44.vercel.app"]);
 
 const baseUrlInput = document.querySelector<HTMLInputElement>("#baseUrl")!;
 const saveSettingsButton = document.querySelector<HTMLButtonElement>("#saveSettings")!;
@@ -7,6 +8,12 @@ const statusEl = document.querySelector<HTMLDivElement>("#status")!;
 
 async function loadSettings() {
   const stored = await chrome.storage.local.get("mytoolkitBaseUrl");
+  const storedBaseUrl = String(stored.mytoolkitBaseUrl || "").replace(/\/$/, "");
+  if (LEGACY_BASE_URLS.has(storedBaseUrl)) {
+    await chrome.storage.local.set({ mytoolkitBaseUrl: DEFAULT_BASE_URL });
+    baseUrlInput.value = DEFAULT_BASE_URL;
+    return;
+  }
   baseUrlInput.value = String(stored.mytoolkitBaseUrl || DEFAULT_BASE_URL);
 }
 

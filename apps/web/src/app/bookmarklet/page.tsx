@@ -12,7 +12,7 @@ export default async function BookmarkletPage() {
   const forwardedProto = requestHeaders.get("x-forwarded-proto") || "https";
   const baseUrl =
     process.env.NEXT_PUBLIC_APP_URL ||
-    (forwardedHost ? `${forwardedProto}://${forwardedHost}` : "https://web-sigma-eight-44.vercel.app");
+    (forwardedHost ? `${forwardedProto}://${forwardedHost}` : "https://mytoolkit-hub.vercel.app");
   const bookmarklet = buildBookmarklet(baseUrl);
 
   return (
