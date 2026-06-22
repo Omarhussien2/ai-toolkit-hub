@@ -1,7 +1,7 @@
-const DEFAULT_BASE_URL = "https://mytoolkit-beige.vercel.app";
+const DEFAULT_BASE_URL = "https://mytoolkit-hub.vercel.app";
 const LEGACY_BASE_URLS = new Set([
   "https://web-sigma-eight-44.vercel.app",
-  "https://mytoolkit-hub.vercel.app",
+  "https://mytoolkit-beige.vercel.app",
 ]);
 
 const baseUrlInput = document.querySelector<HTMLInputElement>("#baseUrl")!;
