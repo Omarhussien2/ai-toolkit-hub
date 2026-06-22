@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { LogIn, LogOut, CheckCircle2, AlertTriangle, AlertCircle, Loader2, UserPlus, Key, X, Mail } from "lucide-react";
 import { getSupabaseBrowserClient } from "@/lib/supabase/browser";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
+import { ADMIN_EMAIL } from "@/lib/constants";
 
-const ADMIN_EMAIL = "omarsamawah@gmail.com";
 const CANONICAL_APP_URL = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "");
 
 export function AuthButtons() {

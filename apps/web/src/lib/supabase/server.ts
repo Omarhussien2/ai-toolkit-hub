@@ -46,6 +46,6 @@ export async function getCurrentUserAndProfile() {
     supabase,
     user,
     profile,
-    isAdmin: profile?.role === "admin" || user.email === "omarsamawah@gmail.com",
+    isAdmin: profile?.role === "admin",
   };
 }

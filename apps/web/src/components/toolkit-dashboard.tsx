@@ -43,11 +43,6 @@ export function ToolkitDashboard({ tools, categories, title, subtitle, defaultTy
         return;
       }
 
-      if (user.email?.trim().toLowerCase() === "omarsamawah@gmail.com") {
-        setIsAdmin(true);
-        return;
-      }
-
       const { data: profile } = await supabase
         .from("profiles")
         .select("role")

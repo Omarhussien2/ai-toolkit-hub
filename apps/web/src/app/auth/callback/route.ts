@@ -1,10 +1,22 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 
+function getSafeNextPath(value: string | null) {
+  if (!value) return "/";
+  if (!value.startsWith("/") || value.startsWith("//")) return "/";
+
+  try {
+    const parsed = new URL(value, "https://mytoolkit.local");
+    return `${parsed.pathname}${parsed.search}${parsed.hash}`;
+  } catch {
+    return "/";
+  }
+}
+
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get("code");
-  const next = requestUrl.searchParams.get("next") || "/";
+  const next = getSafeNextPath(requestUrl.searchParams.get("next"));
   const supabase = await getSupabaseServerClient();
 
   if (code && supabase) {

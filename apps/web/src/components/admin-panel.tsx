@@ -1,8 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import { Database, Download, FileSpreadsheet, Loader2, Upload } from "lucide-react";
+import { Database, Download, FileSpreadsheet, Upload } from "lucide-react";
 import type { Category, Tool } from "@/lib/types";
+import { ADMIN_EMAIL } from "@/lib/constants";
 
 type Props = {
   isAdmin: boolean;
@@ -12,24 +10,6 @@ type Props = {
 };
 
 export function AdminPanel({ isAdmin, userEmail, tools, categories }: Props) {
-  const [busy, setBusy] = useState("");
-  const [message, setMessage] = useState("");
-
-  async function runAction(path: string, options?: RequestInit) {
-    setBusy(path);
-    setMessage("");
-    try {
-      const response = await fetch(path, options);
-      const payload = await response.json();
-      if (!response.ok) throw new Error(payload.error ?? "فشلت العملية.");
-      setMessage(payload.message ?? "تمت العملية بنجاح.");
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : "فشلت العملية.");
-    } finally {
-      setBusy("");
-    }
-  }
-
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-8 md:px-8">
       <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -46,11 +26,11 @@ export function AdminPanel({ isAdmin, userEmail, tools, categories }: Props) {
           {userEmail ? (
             <p className="mt-2 leading-7">
               أنت مسجل حاليًا ببريد <span className="font-mono">{userEmail}</span>. اخرج ثم ادخل ببريد{" "}
-              <span className="font-mono">omarsamawah@gmail.com</span> لفتح أدوات الإدارة.
+              <span className="font-mono">{ADMIN_EMAIL}</span> لفتح أدوات الإدارة.
             </p>
           ) : (
             <p className="mt-2 leading-7">
-              اكتب بريد <span className="font-mono">omarsamawah@gmail.com</span> في خانة الدخول بالأعلى، ثم اضغط
+              اكتب بريد <span className="font-mono">{ADMIN_EMAIL}</span> في خانة الدخول بالأعلى، ثم اضغط
               رابط الدخول الذي سيصلك على البريد. لا تحتاج أي إعداد يدوي إضافي.
             </p>
           )}
@@ -82,8 +62,6 @@ export function AdminPanel({ isAdmin, userEmail, tools, categories }: Props) {
           </div>
         </div>
       </div>
-
-      {message && <p className="mt-6 rounded-md bg-muted p-4 text-sm font-bold">{message}</p>}
     </section>
   );
 }
@@ -102,41 +80,6 @@ function Metric({
       <Icon className="h-5 w-5 text-primary" />
       <div className="mt-3 text-3xl font-black">{value}</div>
       <div className="text-sm font-bold text-zinc-500">{label}</div>
-    </div>
-  );
-}
-
-function ActionCard({
-  title,
-  description,
-  button,
-  icon: Icon,
-  disabled,
-  loading,
-  onClick,
-}: {
-  title: string;
-  description: string;
-  button: string;
-  icon: React.ComponentType<{ className?: string }>;
-  disabled: boolean;
-  loading: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
-      <Icon className="h-6 w-6 text-primary" />
-      <h2 className="mt-3 text-xl font-black">{title}</h2>
-      <p className="mt-2 min-h-14 text-sm leading-7 text-zinc-600 dark:text-zinc-300">{description}</p>
-      <button
-        type="button"
-        disabled={disabled}
-        onClick={onClick}
-        className="mt-5 inline-flex h-10 items-center gap-2 rounded-md bg-primary px-4 text-sm font-black text-primary-foreground disabled:opacity-50"
-      >
-        {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-        {button}
-      </button>
     </div>
   );
 }

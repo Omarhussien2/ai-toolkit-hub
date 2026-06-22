@@ -14,6 +14,7 @@ Arabic-first AI and technology toolkit directory with:
 - `apps/extension`: WXT browser extension.
 - `supabase/migrations`: SQL to run in Supabase SQL Editor.
 - `scripts/prepare-data.mjs`: converts Base44 CSV exports to cleaned seed JSON.
+- `docs/INTEGRATIONS.md`: production links, Supabase Auth, Google OAuth, Google Sheets, and domain-change runbook.
 
 ## Local Setup
 
@@ -24,6 +25,6 @@ cp apps/web/.env.example apps/web/.env.local
 npm run dev
 ```
 
-Run `supabase/migrations/0001_init.sql` in Supabase SQL Editor, then add the Vercel environment variables shown in `apps/web/.env.example`.
+Run the SQL files in `supabase/migrations` in order from the Supabase SQL Editor, then add the Vercel environment variables shown in `apps/web/.env.example`.
 
 Important: do not commit real tokens or service credentials.
