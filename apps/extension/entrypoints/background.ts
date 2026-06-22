@@ -1,8 +1,11 @@
 import { browser } from "wxt/browser";
 import { defineBackground } from "wxt/utils/define-background";
 
-const DEFAULT_BASE_URL = "https://mytoolkit-hub.vercel.app";
-const LEGACY_BASE_URLS = new Set(["https://web-sigma-eight-44.vercel.app"]);
+const DEFAULT_BASE_URL = "https://mytoolkit-beige.vercel.app";
+const LEGACY_BASE_URLS = new Set([
+  "https://web-sigma-eight-44.vercel.app",
+  "https://mytoolkit-hub.vercel.app",
+]);
 
 async function getBaseUrl() {
   const stored = await browser.storage.local.get("mytoolkitBaseUrl");

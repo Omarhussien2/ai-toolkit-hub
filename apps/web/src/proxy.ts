@@ -1,10 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const CANONICAL_HOST = "mytoolkit-hub.vercel.app";
+const CANONICAL_HOST = "mytoolkit-beige.vercel.app";
 const LEGACY_HOSTS = new Set([
   "web-sigma-eight-44.vercel.app",
   "web-samawahs-projects.vercel.app",
   "web-samawahpod-2242-samawahs-projects.vercel.app",
+  "mytoolkit-hub.vercel.app",
 ]);
 
 export function proxy(request: NextRequest) {

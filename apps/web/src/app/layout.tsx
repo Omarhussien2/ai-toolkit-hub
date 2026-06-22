@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "موقع وتطبيق يجمع أدوات الذكاء الاصطناعي والتقنية مع حفظ روابط سريع ونسخ احتياطي.",
   manifest: "/manifest.json",
-  metadataBase: new URL("https://mytoolkit-hub.vercel.app"),
+  metadataBase: new URL("https://mytoolkit-beige.vercel.app"),
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "64x64", type: "image/png" },
