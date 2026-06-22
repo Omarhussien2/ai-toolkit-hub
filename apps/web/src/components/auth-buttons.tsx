@@ -7,6 +7,7 @@ import { getSupabaseBrowserClient } from "@/lib/supabase/browser";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
 
 const ADMIN_EMAIL = "omarsamawah@gmail.com";
+const CANONICAL_APP_URL = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "");
 
 export function AuthButtons() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,7 +37,8 @@ export function AuthButtons() {
 
   function getAuthCallbackUrl() {
     const next = `${window.location.pathname}${window.location.search}`;
-    return `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
+    const origin = CANONICAL_APP_URL || window.location.origin;
+    return `${origin}/auth/callback?next=${encodeURIComponent(next)}`;
   }
 
   async function loginWithGoogle() {
