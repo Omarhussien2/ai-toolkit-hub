@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookmarkPlus, Code2, Database, Home, Library, Sparkles } from "lucide-react";
+import { BookmarkPlus, Code2, Database, Home, Library, ShieldAlert, Sparkles } from "lucide-react";
 import { AuthButtons } from "@/components/auth-buttons";
 
 const nav = [
@@ -9,6 +9,7 @@ const nav = [
   { href: "/github", label: "GitHub", icon: Code2 },
   { href: "/my", label: "مكتبتي", icon: Library },
   { href: "/capture/new", label: "حفظ رابط", icon: BookmarkPlus },
+  { href: "/risk-indicators", label: "المخاطر", icon: ShieldAlert },
   { href: "/admin", label: "الأدمن", icon: Database },
 ];
 
