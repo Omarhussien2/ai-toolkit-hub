@@ -5,7 +5,6 @@ import "./globals.css";
 const alexandria = Alexandria({
   variable: "--font-alexandria",
   subsets: ["arabic"],
-  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const geistMono = Geist_Mono({
