@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
     ...tools.map((tool) => headers.map((header) => csvEscape(getExportValue(tool, header))).join(",")),
   ].join("\n");
 
-  return new NextResponse(csv, {
+  return new NextResponse("\uFEFF" + csv, {
     headers: {
       "content-type": "text/csv; charset=utf-8",
       "content-disposition": "attachment; filename=mytoolkit-tools.csv",

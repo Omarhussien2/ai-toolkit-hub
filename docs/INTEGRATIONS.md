@@ -8,7 +8,7 @@
 
 | الغرض | الرابط أو القيمة |
 | --- | --- |
-| GitHub repository | `https://github.com/omar-x-art/mytoolkit` |
+| GitHub repository | `https://github.com/Omarhussien2/ai-toolkit-hub` |
 | Production app | `https://mytoolkit-hub.vercel.app` |
 | Supabase project URL | `https://ujebndzpqtukulowammh.supabase.co` |
 | Supabase project ref | `ujebndzpqtukulowammh` |

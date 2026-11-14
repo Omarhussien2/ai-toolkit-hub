@@ -234,8 +234,18 @@ function ToolCard({ tool, isAdmin }: { tool: Tool; isAdmin: boolean }) {
       setFavoriteState("idle");
       return;
     }
-    await supabase.from("favorites").upsert({ user_id: user.id, tool_id: tool.id });
-    setFavoriteState("done");
+    try {
+      const { error } = await supabase.from("favorites").upsert({ user_id: user.id, tool_id: tool.id });
+      if (error) {
+        alert("تعذر حفظ الأداة في المفضلة: " + error.message);
+        setFavoriteState("idle");
+        return;
+      }
+      setFavoriteState("done");
+    } catch {
+      alert("حدث خطأ أثناء حفظ المفضلة.");
+      setFavoriteState("idle");
+    }
   }
 
   return (

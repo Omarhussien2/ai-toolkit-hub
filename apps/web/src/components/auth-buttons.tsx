@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import { LogIn, LogOut, CheckCircle2, AlertTriangle, AlertCircle, Loader2, UserPlus, Key, X, Mail } from "lucide-react";
@@ -9,9 +9,10 @@ import { getSupabasePublicEnv } from "@/lib/supabase/env";
 import { ADMIN_EMAIL } from "@/lib/constants";
 
 const CANONICAL_APP_URL = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "");
+const emptySubscribe = () => () => {};
 
 export function AuthButtons() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,10 +20,6 @@ export function AuthButtons() {
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState<"success" | "error" | "warning" | "info" | "">("");
   const [pending, setPending] = useState<"login" | "signup" | "google" | null>(null);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const supabase = getSupabaseBrowserClient();
   const env = getSupabasePublicEnv();
@@ -43,7 +40,10 @@ export function AuthButtons() {
 
   function getAuthCallbackUrl() {
     const next = `${window.location.pathname}${window.location.search}`;
-    const origin = CANONICAL_APP_URL || window.location.origin;
+    const isLocalhost =
+      typeof window !== "undefined" &&
+      (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+    const origin = isLocalhost ? window.location.origin : (CANONICAL_APP_URL || window.location.origin);
     return `${origin}/auth/callback?next=${encodeURIComponent(next)}`;
   }
 
